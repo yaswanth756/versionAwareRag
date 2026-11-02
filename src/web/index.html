@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python 3.12 Documentation RAG System</title>
+  
+  <!-- Markdown & Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 20px 40px;
+      color: #1f2328;
+      background-color: #f6f8fa;
+    }
+    header {
+      background: #fff;
+      padding: 20px 24px;
+      border-radius: 8px;
+      border: 1px solid #d0d7de;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(31,35,40,0.06);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #1f2328;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .subtitle {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      background: #eef1f4;
+      color: #333;
+      border: 1px solid transparent;
+    }
+    .badge-green { background: #dafbe1; color: #1a7f37; border-color: #aceebb; }
+    .badge-blue { background: #ddf4ff; color: #0969da; border-color: #aeddfa; }
+    .badge-orange { background: #fff8c5; color: #9a6700; border-color: #fae17d; }
+    .badge-red { background: #ffebe9; color: #cf222e; border-color: #ffc1ba; }
+    .badge-dark { background: #24292f; color: #fff; }
+
+    .examples-box {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .examples-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #656d76;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .example-btn {
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 5px 10px;
+      margin: 3px 4px 3px 0;
+      cursor: pointer;
+      font-size: 12.5px;
+      color: #0969da;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .example-btn:hover {
+      background: #eef1f4;
+      border-color: #0969da;
+    }
+
+    .form-container {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      padding: 18px 20px;
+      box-shadow: 0 1px 3px rgba(31,35,40,0.06);
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 95px;
+      padding: 12px 14px;
+      font-size: 15px;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      resize: vertical;
+      font-family: inherit;
+      line-height: 1.5;
+      background: #fcfcfc;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #0969da;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(9,105,218,0.15);
+    }
+
+    .button-row {
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    button.submit-btn {
+      background-color: #1f883d;
+      color: #fff;
+      border: 1px solid rgba(31,35,40,0.15);
+      border-radius: 6px;
+      padding: 8px 20px;
+      font-size: 14.5px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 1px 0 rgba(31,35,40,0.1);
+      transition: background 0.15s;
+    }
+    button.submit-btn:hover {
+      background-color: #1a7f37;
+    }
+    button.submit-btn:disabled {
+      background-color: #94d3a2;
+      cursor: not-allowed;
+    }
+    button.clear-btn {
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #24292f;
+      cursor: pointer;
+    }
+    button.clear-btn:hover {
+      background: #eff1f3;
+    }
+
+    #loading {
+      display: none;
+      margin: 20px 0;
+      padding: 16px 20px;
+      background: #ddf4ff;
+      border: 1px solid #54aeff;
+      border-radius: 6px;
+      color: #0969da;
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+
+    #results {
+      display: none;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(31,35,40,0.06);
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 8px;
+      color: #1f2328;
+    }
+
+    /* Clean Markdown Output Styles */
+    .answer-text {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #1f2328;
+    }
+    .answer-text p {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+    .answer-text p:last-child {
+      margin-bottom: 0;
+    }
+    .answer-text h1, .answer-text h2, .answer-text h3, .answer-text h4 {
+      margin-top: 22px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #1f2328;
+    }
+    .answer-text h3 {
+      font-size: 16px;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 4px;
+    }
+    .answer-text ul, .answer-text ol {
+      margin: 8px 0 16px;
+      padding-left: 26px;
+    }
+    .answer-text li {
+      margin-bottom: 6px;
+    }
+    
+    /* Inline Code */
+    .answer-text code:not(pre code) {
+      background-color: #eff1f3;
+      color: #0550ae;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 13.5px;
+      border: 1px solid #e1e4e8;
+    }
+
+    /* Fenced Code Blocks with Header & Copy */
+    .code-block-wrapper {
+      position: relative;
+      margin: 14px 0 18px;
+      border-radius: 6px;
+      border: 1px solid #d0d7de;
+      overflow: hidden;
+      background: #f6f8fa;
+    }
+    .code-block-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eaeef2;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #57606a;
+      border-bottom: 1px solid #d0d7de;
+    }
+    .copy-btn {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      color: #24292f;
+      font-weight: 500;
+    }
+    .copy-btn:hover {
+      background: #f3f4f6;
+    }
+    .answer-text pre {
+      margin: 0;
+      padding: 14px 16px;
+      overflow-x: auto;
+      background: #f6f8fa;
+    }
+    .answer-text pre code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 13.5px;
+      line-height: 1.5;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+
+    /* Interactive Citation Pills */
+    .doc-pill {
+      display: inline-block;
+      background-color: #ddf4ff;
+      color: #0969da;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 1px 7px;
+      border-radius: 12px;
+      border: 1px solid #54aeff;
+      cursor: pointer;
+      margin: 0 2px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .doc-pill:hover {
+      background-color: #0969da;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .metrics-bar {
+      margin-bottom: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    /* Chunk cards */
+    .chunk-item {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      font-size: 13.5px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .chunk-item.highlighted {
+      background: #fffbe6;
+      border-color: #f1e05a;
+      box-shadow: 0 0 0 2px rgba(241, 224, 90, 0.4);
+    }
+    .chunk-header {
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .chunk-doc-path {
+      color: #0969da;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12.5px;
+    }
+    .chunk-scores {
+      font-size: 12px;
+      color: #57606a;
+    }
+    .chunk-breadcrumbs {
+      color: #656d76;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .chunk-content {
+      white-space: pre-wrap;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 12px;
+      background: #f6f8fa;
+      border: 1px solid #eaeef2;
+      padding: 10px 12px;
+      border-radius: 4px;
+      max-height: 220px;
+      overflow-y: auto;
+      line-height: 1.45;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 8px 0;
+      color: #0969da;
+      outline: none;
+    }
+
+    #error-box {
+      display: none;
+      background: #ffebe9;
+      border: 1px solid #ff8182;
+      color: #cf222e;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Python 3.12 Documentation RAG System</h1>
+    <div class="subtitle">
+      <span class="badge badge-blue">Vertex AI: gemini-2.5-flash</span>
+      <span class="badge badge-green">Reranker: BGE-Large (Tesla T4)</span>
+      <span class="badge badge-orange">Location: asia-south1 Mumbai</span>
+      <span class="badge">Corpus: 9,800 Python 3.12 Chunks</span>
+    </div>
+  </header>
+
+  <div class="examples-box">
+    <div class="examples-label">Quick Test Examples (Click to run):</div>
+    <button class="example-btn" onclick="runExample('What arguments does itertools.batched() accept in Python 3.12?')">itertools.batched()</button>
+    <button class="example-btn" onclick="runExample('How to use math.isclose to compare floating point numbers?')">math.isclose()</button>
+    <button class="example-btn" onclick="runExample('What is sys.monitoring in Python 3.12 and what events does it support?')">sys.monitoring</button>
+    <button class="example-btn" onclick="runExample('How does pathlib.Path.walk() differ from os.walk() in Python 3.12?')">pathlib.Path.walk()</button>
+    <button class="example-btn" onclick="runExample('How do I bake a chocolate cake at home?')">Test Abstention Gate (OOD)</button>
+  </div>
+
+  <div class="form-container">
+    <form id="query-form" onsubmit="handleQuery(event)">
+      <textarea id="query-input" placeholder="Ask any question about Python 3.12 docs (e.g., What does itertools.batched() do?)..." required></textarea>
+      <div class="button-row">
+        <button type="submit" id="submit-btn" class="submit-btn">Ask Python 3.12 Docs</button>
+        <button type="button" class="clear-btn" onclick="clearAll()">Clear</button>
+        <span style="color: #656d76; font-size: 12px; margin-left: auto;">Press <kbd style="background:#eee;padding:2px 5px;border-radius:3px;">Enter</kbd> to submit, <kbd style="background:#eee;padding:2px 5px;border-radius:3px;">Shift+Enter</kbd> for newline</span>
+      </div>
+    </form>
+  </div>
+
+  <div id="loading">
+    ⏳ Retrieving relevant documentation excerpts &amp; generating grounded response...
+  </div>
+
+  <div id="error-box"></div>
+
+  <div id="results">
+    <!-- Latency & Status -->
+    <div class="metrics-bar" id="metrics-bar"></div>
+
+    <!-- Grounded Answer Card -->
+    <div class="card">
+      <h2 class="card-title" id="answer-title">Grounded Answer</h2>
+      <div id="answer-content" class="answer-text"></div>
+    </div>
+
+    <!-- Cited Sources Card -->
+    <div class="card" id="cited-card">
+      <h2 class="card-title">Cited Documentation Sources (<span id="cited-count">0</span>)</h2>
+      <div id="cited-list"></div>
+    </div>
+
+    <!-- Collapsible Full Context Pool -->
+    <details class="card" id="all-chunks-card">
+      <summary>View All Top Retrieved Context Chunks (<span id="all-chunks-count">0</span>)</summary>
+      <div id="all-chunks-list" style="margin-top: 15px;"></div>
+    </details>
+  </div>
+
+  <script>
+    const form = document.getElementById('query-form');
+    const input = document.getElementById('query-input');
+    const submitBtn = document.getElementById('submit-btn');
+    const loading = document.getElementById('loading');
+    const results = document.getElementById('results');
+    const errorBox = document.getElementById('error-box');
+
+    // Configure marked options
+    if (typeof marked !== 'undefined') {
+      marked.setOptions({
+        gfm: true,
+        breaks: true,
+        headerIds: false,
+        mangle: false,
+        highlight: function(code, lang) {
+          if (typeof hljs !== 'undefined') {
+            const validLang = lang && hljs.getLanguage(lang) ? lang : 'python';
+            try {
+              return hljs.highlight(code, { language: validLang }).value;
+            } catch (err) {}
+          }
+          return code;
+        }
+      });
+    }
+
+    // Enter to submit
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        form.dispatchEvent(new Event('submit'));
+      }
+    });
+
+    function runExample(text) {
+      input.value = text;
+      form.dispatchEvent(new Event('submit'));
+    }
+
+    function clearAll() {
+      input.value = '';
+      results.style.display = 'none';
+      errorBox.style.display = 'none';
+      loading.style.display = 'none';
+      input.focus();
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Fallback simple markdown parser if CDN is offline
+    function simpleMarkdownFallback(text) {
+      let html = escapeHtml(text);
+      // Code blocks
+      html = html.replace(/```([a-z0-9_-]*)\n([\s\S]*?)```/g, function(match, lang, code) {
+        return `<pre><code class="language-${lang || 'python'}">${code.trim()}</code></pre>`;
+      });
+      // Inline code
+      html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+      // Headers
+      html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+      html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+      html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+      // Bold
+      html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      // Lists
+      html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
+      // Wrap paragraphs
+      return html.split('\n\n').map(p => p.startsWith('<h') || p.startsWith('<pre') || p.startsWith('<li>') ? p : `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+    }
+
+    function parseMarkdown(mdText) {
+      let rawHtml = '';
+      if (typeof marked !== 'undefined' && typeof marked.parse === 'function') {
+        rawHtml = marked.parse(mdText);
+      } else {
+        rawHtml = simpleMarkdownFallback(mdText);
+      }
+
+      // Convert [Doc X] or [Doc 1, Doc 2] into interactive clickable pills
+      const pillHtml = rawHtml.replace(/\[Doc\s+(\d+(?:\s*,\s*(?:Doc\s+)?\d+)*)\]/gi, function(match, indicesGroup) {
+        const numbers = indicesGroup.match(/\d+/g) || [];
+        return numbers.map(num => `<span class="doc-pill" onclick="jumpToChunk(${num})" title="Click to view Source Chunk [Doc ${num}]">[Doc ${num}]</span>`).join(' ');
+      });
+
+      return pillHtml;
+    }
+
+    // Enhance code blocks with headers and copy buttons
+    function enhanceCodeBlocks(container) {
+      const pres = container.querySelectorAll('pre');
+      pres.forEach((pre) => {
+        if (pre.parentElement.classList.contains('code-block-wrapper')) return;
+
+        const codeEl = pre.querySelector('code');
+        const codeText = codeEl ? codeEl.innerText : pre.innerText;
+
+        // Create wrapper
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+
+        // Header
+        const header = document.createElement('div');
+        header.className = 'code-block-header';
+        header.innerHTML = `
+          <span>Python</span>
+          <button class="copy-btn" type="button">Copy</button>
+        `;
+
+        const copyBtn = header.querySelector('.copy-btn');
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(codeText).then(() => {
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => { copyBtn.textContent = 'Copy'; }, 1800);
+          });
+        });
+
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(header);
+        wrapper.appendChild(pre);
+
+        // Highlight with hljs if available
+        if (typeof hljs !== 'undefined' && codeEl) {
+          hljs.highlightElement(codeEl);
+        }
+      });
+    }
+
+    function jumpToChunk(rank) {
+      // Find chunk in cited or all chunks
+      let target = document.getElementById('chunk-cited-' + rank);
+      if (!target) {
+        // Expand all chunks card if needed
+        const allCard = document.getElementById('all-chunks-card');
+        if (allCard) allCard.open = true;
+        target = document.getElementById('chunk-all-' + rank);
+      }
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add('highlighted');
+        setTimeout(() => { target.classList.remove('highlighted'); }, 2000);
+      }
+    }
+
+    async function handleQuery(e) {
+      e.preventDefault();
+      const query = input.value.trim();
+      if (!query) return;
+
+      submitBtn.disabled = true;
+      loading.style.display = 'block';
+      results.style.display = 'none';
+      errorBox.style.display = 'none';
+
+      try {
+        const response = await fetch('/api/query', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query: query })
+        });
+
+        if (!response.ok) {
+          const errData = await response.json().catch(() => ({ detail: response.statusText }));
+          throw new Error(errData.detail || 'Request failed (' + response.status + ')');
+        }
+
+        const data = await response.json();
+        renderResults(data);
+      } catch (err) {
+        errorBox.textContent = 'Error: ' + err.message;
+        errorBox.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        loading.style.display = 'none';
+      }
+    }
+
+    function renderResults(data) {
+      // 1. Timings & Out-of-Domain Badge
+      const metricsBar = document.getElementById('metrics-bar');
+      const timings = data.timings || {};
+
+      let oodBadge = '';
+      if (data.is_out_of_domain) {
+        oodBadge = '<span class="badge badge-red">🛡️ Out-of-Domain Short-Circuit (Zero LLM Tokens Used)</span>';
+      }
+
+      metricsBar.innerHTML = `
+        ${oodBadge}
+        <span class="badge badge-blue">Hybrid Search: ${Number(timings.stage1_hybrid_ms || 0).toFixed(1)} ms</span>
+        <span class="badge badge-green">Neural Rerank: ${Number(timings.stage2_rerank_ms || 0).toFixed(1)} ms</span>
+        <span class="badge badge-orange">Vertex AI Gen: ${Number(timings.generation_ms || 0).toFixed(1)} ms</span>
+        <span class="badge badge-dark">Total Latency: ${Number(timings.total_e2e_ms || 0).toFixed(1)} ms</span>
+      `;
+
+      // 2. Render Formatted Markdown Answer
+      const answerTitle = document.getElementById('answer-title');
+      answerTitle.textContent = data.is_out_of_domain ? 'Abstention / Refusal Response' : 'Grounded Answer';
+
+      const answerContent = document.getElementById('answer-content');
+      answerContent.innerHTML = parseMarkdown(data.answer);
+      enhanceCodeBlocks(answerContent);
+
+      // 3. Cited Sources
+      const citedCard = document.getElementById('cited-card');
+      const citedList = document.getElementById('cited-list');
+      const citedChunks = data.cited_chunks || [];
+      document.getElementById('cited-count').textContent = citedChunks.length;
+
+      if (citedChunks.length === 0) {
+        if (data.is_out_of_domain) {
+          citedCard.style.display = 'none';
+        } else {
+          citedCard.style.display = 'block';
+          citedList.innerHTML = '<p style="color: #57606a; margin: 0;"><em>No specific document citations found in response.</em></p>';
+        }
+      } else {
+        citedCard.style.display = 'block';
+        citedList.innerHTML = citedChunks.map(c => `
+          <div class="chunk-item" id="chunk-cited-${c.rank}">
+            <div class="chunk-header">
+              <span><span class="doc-pill">[Doc ${c.rank}]</span> <code class="chunk-doc-path">${escapeHtml(c.doc_path || '')}</code></span>
+              <span class="chunk-scores">Reranker Score: <strong>${Number(c.ce_score).toFixed(4)}</strong></span>
+            </div>
+            <div class="chunk-breadcrumbs">
+              ${escapeHtml((c.section_breadcrumbs || []).join(' &gt; '))}
+            </div>
+            <div class="chunk-content">${escapeHtml(c.content || '')}</div>
+          </div>
+        `).join('');
+      }
+
+      // 4. All Retrieved Chunks (Pool)
+      const allChunks = data.all_retrieved_chunks || [];
+      document.getElementById('all-chunks-count').textContent = allChunks.length;
+      const allChunksList = document.getElementById('all-chunks-list');
+      allChunksList.innerHTML = allChunks.map(c => `
+        <div class="chunk-item" id="chunk-all-${c.rank}">
+          <div class="chunk-header">
+            <span><strong>#${c.rank}</strong> <code class="chunk-doc-path">${escapeHtml(c.doc_path || '')}</code></span>
+            <span class="chunk-scores">CE: <strong>${Number(c.ce_score).toFixed(4)}</strong> | BM25: ${Number(c.bm25_score || 0).toFixed(2)} | Dense: ${Number(c.dense_score || 0).toFixed(4)}</span>
+          </div>
+          <div class="chunk-breadcrumbs">
+            ${escapeHtml((c.section_breadcrumbs || []).join(' &gt; '))}
+          </div>
+          <div class="chunk-content">${escapeHtml(c.content || '')}</div>
+        </div>
+      `).join('');
+
+      results.style.display = 'block';
+      results.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

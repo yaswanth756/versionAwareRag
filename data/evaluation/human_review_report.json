@@ -1,0 +1,2919 @@
+{
+  "benchmark_version": "1.0.0",
+  "benchmark_status": "FROZEN",
+  "freeze_date": "2026-10-31",
+  "benchmark_file": "data/evaluation/dev.reviewed.jsonl",
+  "benchmark_sha256": "cdb72a100a39ed26e5baac060a637d3939eb00ac7e2b6a009266945482abfd92",
+  "benchmark_record_count": 140,
+  "approval_distribution": {
+    "explicit_user_approved_count": 6,
+    "user_pre_accepted_count": 1,
+    "audit_accepted_count": 133,
+    "total_benchmark_records": 140
+  },
+  "explicit_user_approved_questions": [
+    "Q111",
+    "Q113",
+    "Q114",
+    "Q116",
+    "Q118",
+    "Q119"
+  ],
+  "user_pre_accepted_questions": [
+    "Q001"
+  ],
+  "approval_notes": "Questions Q111, Q113, Q114, Q116, Q118, and Q119 were explicitly approved by the user following correction. Q001 was separately accepted by the user earlier. The remaining 133 questions were accepted through systematic audit verification against Python 3.12 documentation chunks and were not individually reviewed by the user.",
+  "total_questions_audited": 140,
+  "accepted_questions_count": 57,
+  "total_revised_and_accepted_count": 83,
+  "audit_accepted_as_is_count": 56,
+  "audit_revised_and_accepted_count": 83,
+  "questions_with_corrected_expected_answers_count": 6,
+  "questions_with_corrected_evidence_count": 84,
+  "questions_with_added_or_removed_relevant_chunks_count": 8,
+  "questions_requiring_human_review_count": 0,
+  "rejected_questions_count": 0,
+  "category_wise_statistics": {
+    "exact_api_lookup": {
+      "total": 21,
+      "accepted_as_is": 1,
+      "revised": 20,
+      "answers_corrected": 0,
+      "evidence_expanded": 20,
+      "chunks_added": 0
+    },
+    "conceptual": {
+      "total": 21,
+      "accepted_as_is": 17,
+      "revised": 4,
+      "answers_corrected": 0,
+      "evidence_expanded": 4,
+      "chunks_added": 0
+    },
+    "code_example": {
+      "total": 21,
+      "accepted_as_is": 8,
+      "revised": 13,
+      "answers_corrected": 0,
+      "evidence_expanded": 13,
+      "chunks_added": 0
+    },
+    "version_specific": {
+      "total": 21,
+      "accepted_as_is": 10,
+      "revised": 11,
+      "answers_corrected": 6,
+      "evidence_expanded": 11,
+      "chunks_added": 2
+    },
+    "troubleshooting": {
+      "total": 18,
+      "accepted_as_is": 13,
+      "revised": 5,
+      "answers_corrected": 0,
+      "evidence_expanded": 5,
+      "chunks_added": 1
+    },
+    "multi_document": {
+      "total": 20,
+      "accepted_as_is": 1,
+      "revised": 19,
+      "answers_corrected": 0,
+      "evidence_expanded": 19,
+      "chunks_added": 1
+    },
+    "ambiguous_terminology": {
+      "total": 18,
+      "accepted_as_is": 6,
+      "revised": 12,
+      "answers_corrected": 0,
+      "evidence_expanded": 12,
+      "chunks_added": 4
+    }
+  },
+  "modified_query_ids": [
+    "Q001",
+    "Q002",
+    "Q003",
+    "Q004",
+    "Q005",
+    "Q007",
+    "Q010",
+    "Q011",
+    "Q012",
+    "Q014",
+    "Q016",
+    "Q019",
+    "Q020",
+    "Q024",
+    "Q025",
+    "Q026",
+    "Q027",
+    "Q028",
+    "Q029",
+    "Q030",
+    "Q036",
+    "Q055",
+    "Q056",
+    "Q060",
+    "Q062",
+    "Q063",
+    "Q064",
+    "Q065",
+    "Q068",
+    "Q070",
+    "Q072",
+    "Q073",
+    "Q080",
+    "Q087",
+    "Q088",
+    "Q089",
+    "Q090",
+    "Q104",
+    "Q105",
+    "Q109",
+    "Q111",
+    "Q112",
+    "Q113",
+    "Q114",
+    "Q116",
+    "Q117",
+    "Q118",
+    "Q119",
+    "Q128",
+    "Q130",
+    "Q136",
+    "Q140",
+    "Q143",
+    "Q147",
+    "Q148",
+    "Q150",
+    "Q151",
+    "Q152",
+    "Q153",
+    "Q154",
+    "Q156",
+    "Q157",
+    "Q158",
+    "Q159",
+    "Q161",
+    "Q162",
+    "Q163",
+    "Q166",
+    "Q167",
+    "Q168",
+    "Q171",
+    "Q172",
+    "Q176",
+    "Q177",
+    "Q180",
+    "Q181",
+    "Q184",
+    "Q185",
+    "Q187",
+    "Q189",
+    "Q192",
+    "Q194",
+    "Q198",
+    "Q200"
+  ],
+  "before_after_details": {
+    "Q001": {
+      "before": {
+        "question": "What parameters does itertools.batched() accept and how does it handle elements when the input length is not divisible by the batch size?",
+        "expected_answer": "itertools.batched(iterable, n) accepts an iterable and an integer batch size n. It batches data from the iterable into tuples of length n, and the last batch may be shorter than n if the total number of items is not evenly divisible by n.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::api_itertools.batched::0",
+            "relevance_score": 3,
+            "evidence_text": "Batch data from the iterable into tuples of length n. The last batch may be shorter than n.",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What parameters does itertools.batched() accept and how does it handle elements when the input length is not divisible by the batch size?",
+        "expected_answer": "itertools.batched(iterable, n) accepts an iterable and an integer batch size n. It batches data from the iterable into tuples of length n, and the last batch may be shorter than n if the total number of items is not evenly divisible by n.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::api_itertools.batched::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: itertools. batched ( iterable , n )\n\nBatch data from the iterable into tuples of length n. The last batch may be shorter than n.",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Human approved (ACCEPT). Evidence expanded to include signature alongside batching behavior for complete self-containment."
+    },
+    "Q002": {
+      "before": {
+        "question": "What are the default parameter values and the return type for pathlib.Path.walk()?",
+        "expected_answer": "Path.walk(top_down=True, on_error=None, follow_symlinks=False) defaults to top_down=True, on_error=None, and follow_symlinks=False. It generates file and directory names by walking the directory tree, yielding a 3-tuple of (dirpath, dirnames, filenames).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_pathlib::api_pathlib.Path.walk::0",
+            "relevance_score": 3,
+            "evidence_text": "Generate the file names in a directory tree by walking the tree either top-down or bottom-up.",
+            "doc_path": "library/pathlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What are the default parameter values and the return type for pathlib.Path.walk()?",
+        "expected_answer": "Path.walk(top_down=True, on_error=None, follow_symlinks=False) defaults to top_down=True, on_error=None, and follow_symlinks=False. It generates file and directory names by walking the directory tree, yielding a 3-tuple of (dirpath, dirnames, filenames).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_pathlib::api_pathlib.Path.walk::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: Path. walk ( top_down = True , on_error = None , follow_symlinks = False )\n\nGenerate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the directory tree rooted at self (including self but excluding ‘.’ and ‘..’), the method yields a 3-tuple of (dirpath, dirnames, filenames).",
+            "doc_path": "library/pathlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the exact signature with parameter default values and the 3-tuple return value specification."
+    },
+    "Q003": {
+      "before": {
+        "question": "How should the typing.override decorator be used and what are type checkers expected to do when it is applied?",
+        "expected_answer": "typing.override is a decorator used to indicate that a method in a subclass is intended to override a method or attribute in a superclass. Type checkers should emit an error if the decorated method does not actually override anything in any base class.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_typing::api_typing.override::0",
+            "relevance_score": 3,
+            "evidence_text": "Decorator to indicate that a method in a subclass is intended to override a method or attribute in a superclass.",
+            "doc_path": "library/typing.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How should the typing.override decorator be used and what are type checkers expected to do when it is applied?",
+        "expected_answer": "typing.override is a decorator used to indicate that a method in a subclass is intended to override a method or attribute in a superclass. Type checkers should emit an error if the decorated method does not actually override anything in any base class.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_typing::api_typing.override::0",
+            "relevance_score": 3,
+            "evidence_text": "Decorator to indicate that a method in a subclass is intended to override a method or attribute in a superclass. Type checkers should emit an error if a method decorated with @override does not, in fact, override anything.",
+            "doc_path": "library/typing.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the type checkers requirement clause directly supporting the second half of the expected answer."
+    },
+    "Q004": {
+      "before": {
+        "question": "What is the default maxsize for functools.lru_cache and what happens if maxsize is set to None?",
+        "expected_answer": "functools.lru_cache has a default maxsize of 128. If maxsize is set to None, the LRU feature is disabled and the cache can grow without bound.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functools::api_functools.lru_cache::0",
+            "relevance_score": 3,
+            "evidence_text": "Decorator to wrap a function with a memoizing callable that saves up to the maxsize most recent calls.",
+            "doc_path": "library/functools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the default maxsize for functools.lru_cache and what happens if maxsize is set to None?",
+        "expected_answer": "functools.lru_cache has a default maxsize of 128. If maxsize is set to None, the LRU feature is disabled and the cache can grow without bound.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functools::api_functools.lru_cache::0",
+            "relevance_score": 3,
+            "evidence_text": "leaving the maxsize at its default value of 128: If maxsize is set to None, the LRU feature is disabled and the cache can grow without bound.",
+            "doc_path": "library/functools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence excerpt replaced with the exact sentence documenting maxsize default value of 128 and maxsize=None unbounded cache behavior."
+    },
+    "Q005": {
+      "before": {
+        "question": "What are the default tolerances in math.isclose(a, b)?",
+        "expected_answer": "In math.isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0), rel_tol defaults to 1e-09 (relative tolerance) and abs_tol defaults to 0.0 (minimum absolute tolerance).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_math::api_math.isclose::0",
+            "relevance_score": 3,
+            "evidence_text": "Return True if the values a and b are close to each other and False otherwise.",
+            "doc_path": "library/math.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What are the default tolerances in math.isclose(a, b)?",
+        "expected_answer": "In math.isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0), rel_tol defaults to 1e-09 (relative tolerance) and abs_tol defaults to 0.0 (minimum absolute tolerance).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_math::api_math.isclose::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: math. isclose ( a , b , * , rel_tol = 1e-09 , abs_tol = 0.0 )\n\nReturn True if the values a and b are close to each other and False otherwise.",
+            "doc_path": "library/math.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the signature specifying default values rel_tol=1e-09 and abs_tol=0.0."
+    },
+    "Q007": {
+      "before": {
+        "question": "Why is dataclasses.MISSING used as a sentinel in dataclasses.field() instead of None?",
+        "expected_answer": "dataclasses.MISSING is a sentinel object used because None is a valid default value for fields with a distinct meaning. Specifying both default and default_factory in field() is an error.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_dataclasses::api_dataclasses.field::0",
+            "relevance_score": 3,
+            "evidence_text": "To satisfy this need for additional information, you can replace the default field value with a call to the provided field() function.",
+            "doc_path": "library/dataclasses.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "Why is dataclasses.MISSING used as a sentinel in dataclasses.field() instead of None?",
+        "expected_answer": "dataclasses.MISSING is a sentinel object used because None is a valid default value for fields with a distinct meaning. Specifying both default and default_factory in field() is an error.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_dataclasses::api_dataclasses.field::0",
+            "relevance_score": 3,
+            "evidence_text": "As shown above, the MISSING value is a sentinel object used to detect if some parameters are provided by the user. This sentinel is used because None is a valid value for some parameters with a distinct meaning. No code should directly use the MISSING value.",
+            "doc_path": "library/dataclasses.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the exact passage explaining why MISSING is used as a sentinel instead of None."
+    },
+    "Q010": {
+      "before": {
+        "question": "What does contextlib.nullcontext return from its __enter__ method when initialized with enter_result?",
+        "expected_answer": "contextlib.nullcontext(enter_result=None) returns enter_result from its __enter__() method, while otherwise performing no operation.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_contextlib::api_contextlib.nullcontext::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a context manager that returns enter_result from __enter__, but otherwise does nothing.",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What does contextlib.nullcontext return from its __enter__ method when initialized with enter_result?",
+        "expected_answer": "contextlib.nullcontext(enter_result=None) returns enter_result from its __enter__() method, while otherwise performing no operation.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_contextlib::api_contextlib.nullcontext::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: contextlib. nullcontext ( enter_result = None )\n\nReturn a context manager that returns enter_result from __enter__, but otherwise does nothing.",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include function signature showing enter_result=None default."
+    },
+    "Q011": {
+      "before": {
+        "question": "What is collections.Counter and what method returns the n most frequent elements?",
+        "expected_answer": "collections.Counter is a dict subclass for counting hashable objects. The most_common([n]) method returns a list of the n most common elements and their counts from the most common to the least.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_collections::api_collections.Counter::0",
+            "relevance_score": 3,
+            "evidence_text": "Counter is a dict subclass for counting hashable objects.",
+            "doc_path": "library/collections.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is collections.Counter and what method returns the n most frequent elements?",
+        "expected_answer": "collections.Counter is a dict subclass for counting hashable objects. The most_common([n]) method returns a list of the n most common elements and their counts from the most common to the least.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_collections::api_collections.Counter::0",
+            "relevance_score": 3,
+            "evidence_text": "Counter is a dict subclass for counting hashable objects. It is a collection where elements are stored as dictionary keys and their counts are stored as dictionary values.",
+            "doc_path": "library/collections.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include both the class definition and the most_common([n]) method definition from the chunk."
+    },
+    "Q012": {
+      "before": {
+        "question": "How are tasks spawned within an asyncio.TaskGroup?",
+        "expected_answer": "Tasks are added to an asyncio.TaskGroup using the tg.create_task() method within an async with TaskGroup() context.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_asyncio-task::api_asyncio.TaskGroup::0",
+            "relevance_score": 3,
+            "evidence_text": "An asynchronous context manager holding a group of tasks. Tasks can be added to the group using create_task().",
+            "doc_path": "library/asyncio-task.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How are tasks spawned within an asyncio.TaskGroup?",
+        "expected_answer": "Tasks are added to an asyncio.TaskGroup using the tg.create_task() method within an async with TaskGroup() context.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_asyncio-task::api_asyncio.TaskGroup::0",
+            "relevance_score": 3,
+            "evidence_text": "An asynchronous context manager holding a group of tasks. Tasks can be added to the group using create_task(). All tasks are awaited when the context manager exits.",
+            "doc_path": "library/asyncio-task.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the create_task method signature and description within TaskGroup context."
+    },
+    "Q014": {
+      "before": {
+        "question": "What arguments does hashlib.file_digest() take and what mode must the file object be opened in?",
+        "expected_answer": "hashlib.file_digest(fileobj, digest, /) accepts a file-like object and a digest algorithm. The fileobj must be opened for reading in binary mode.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_hashlib::api_hashlib.file_digest::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a digest object that has been updated with contents of file object.",
+            "doc_path": "library/hashlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What arguments does hashlib.file_digest() take and what mode must the file object be opened in?",
+        "expected_answer": "hashlib.file_digest(fileobj, digest, /) accepts a file-like object and a digest algorithm. The fileobj must be opened for reading in binary mode.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_hashlib::api_hashlib.file_digest::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: hashlib. file_digest ( fileobj , digest , / )\n\nReturn a digest object that has been updated with contents of file object. fileobj must be a file-like object opened for reading in binary mode.",
+            "doc_path": "library/hashlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the requirement that fileobj must be opened in binary mode."
+    },
+    "Q016": {
+      "before": {
+        "question": "How does inspect.iscoroutinefunction() determine if an object is a coroutine function?",
+        "expected_answer": "inspect.iscoroutinefunction(object) returns True if the object is a coroutine function created with an async def syntax.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_inspect::api_inspect.iscoroutinefunction::0",
+            "relevance_score": 3,
+            "evidence_text": "Return True if the object is a coroutine function",
+            "doc_path": "library/inspect.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does inspect.iscoroutinefunction() determine if an object is a coroutine function?",
+        "expected_answer": "inspect.iscoroutinefunction(object) returns True if the object is a coroutine function created with an async def syntax.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_inspect::api_inspect.iscoroutinefunction::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: inspect. iscoroutinefunction ( object )\n\nReturn True if the object is a coroutine function (a function defined with an async def syntax)",
+            "doc_path": "library/inspect.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include signature and async def detection criteria."
+    },
+    "Q019": {
+      "before": {
+        "question": "What is csv.DictReader and what happens if a row in the CSV has more fields than fieldnames?",
+        "expected_answer": "csv.DictReader creates an object that maps row data to a dictionary where field keys come from the first row or the fieldnames parameter. If a row has more fields than fieldnames, the remaining data is stored in a list keyed by the restkey parameter (defaulting to None).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_csv::api_csv.DictReader::0",
+            "relevance_score": 3,
+            "evidence_text": "Create an object that operates like a regular reader but maps the information in each row to a dict",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is csv.DictReader and what happens if a row in the CSV has more fields than fieldnames?",
+        "expected_answer": "csv.DictReader creates an object that maps row data to a dictionary where field keys come from the first row or the fieldnames parameter. If a row has more fields than fieldnames, the remaining data is stored in a list keyed by the restkey parameter (defaulting to None).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_csv::api_csv.DictReader::0",
+            "relevance_score": 3,
+            "evidence_text": "Create an object that operates like a regular reader but maps the information in each row to a dict whose keys are given by the optional fieldnames parameter. The fieldnames parameter is a sequence. If fieldnames is omitted, the values in the first row of file f will be used as the fieldnames and will be omitted from the results. If fieldnames is provided, they will be used and the first row will be included in the results. Regardless of how the fieldnames are determined, the dictionary preserves their original ordering. If a row has more fields than fieldnames, the remaining data is put in a list and stored with the fieldname specified by restkey (which defaults to None).",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the restkey and restval parameter descriptions when rows have missing or excess fields."
+    },
+    "Q020": {
+      "before": {
+        "question": "How does random.choices differ from random.sample in terms of replacement?",
+        "expected_answer": "random.choices chooses elements from the population with replacement (elements can be chosen multiple times), whereas random.sample samples without replacement.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_random::api_random.choices::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a k sized list of elements chosen from the population with replacement.",
+            "doc_path": "library/random.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does random.choices differ from random.sample in terms of replacement?",
+        "expected_answer": "random.choices chooses elements from the population with replacement (elements can be chosen multiple times), whereas random.sample samples without replacement.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_random::api_random.choices::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: random. choices ( population , weights = None , * , cum_weights = None , k = 1 )\n\nReturn a k sized list of elements chosen from the population with replacement.",
+            "doc_path": "library/random.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include signature with default k=1 and replacement specification."
+    },
+    "Q024": {
+      "before": {
+        "question": "What does statistics.fmean() calculate and how does its speed compare to statistics.mean()?",
+        "expected_answer": "statistics.fmean(data, weights=None) converts data to floats and computes the arithmetic mean. It runs faster than the mean() function and always returns a float.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_statistics::api_statistics.fmean::0",
+            "relevance_score": 3,
+            "evidence_text": "Convert data to floats and compute the arithmetic mean.",
+            "doc_path": "library/statistics.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What does statistics.fmean() calculate and how does its speed compare to statistics.mean()?",
+        "expected_answer": "statistics.fmean(data, weights=None) converts data to floats and computes the arithmetic mean. It runs faster than the mean() function and always returns a float.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_statistics::api_statistics.fmean::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: statistics. fmean ( data , weights = None )\n\nConvert data to floats and compute the arithmetic mean. This runs faster than the mean() function and it always returns a float.",
+            "doc_path": "library/statistics.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include signature and performance comparison against mean()."
+    },
+    "Q025": {
+      "before": {
+        "question": "What does heapq.merge() do and what must be true about its inputs?",
+        "expected_answer": "heapq.merge(*iterables, key=None, reverse=False) merges multiple sorted inputs into a single sorted iterator. The input iterables must already be sorted according to key and reverse.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_heapq::api_heapq.merge::0",
+            "relevance_score": 3,
+            "evidence_text": "Merge multiple sorted inputs into a single sorted output",
+            "doc_path": "library/heapq.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What does heapq.merge() do and what must be true about its inputs?",
+        "expected_answer": "heapq.merge(*iterables, key=None, reverse=False) merges multiple sorted inputs into a single sorted iterator. The input iterables must already be sorted according to key and reverse.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_heapq::api_heapq.merge::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: heapq. merge ( * iterables , key = None , reverse = False )\n\nMerge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values.",
+            "doc_path": "library/heapq.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include signature and requirement that inputs be pre-sorted."
+    },
+    "Q026": {
+      "before": {
+        "question": "What does logging.basicConfig() do when handlers are already attached to the root logger?",
+        "expected_answer": "By default, logging.basicConfig() does nothing if the root logger already has handlers configured, unless the force=True keyword argument is provided (added in Python 3.8).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_logging::api_logging.basicConfig::0",
+            "relevance_score": 3,
+            "evidence_text": "Does basic configuration for the logging system by creating a StreamHandler with a default Formatter",
+            "doc_path": "library/logging.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What does logging.basicConfig() do when handlers are already attached to the root logger?",
+        "expected_answer": "By default, logging.basicConfig() does nothing if the root logger already has handlers configured, unless the force=True keyword argument is provided (added in Python 3.8).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_logging::api_logging.basicConfig::0",
+            "relevance_score": 3,
+            "evidence_text": "This function does nothing if the root logger already has handlers configured, unless the keyword argument force is set to True.",
+            "doc_path": "library/logging.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include existing handlers behavior and the force=True parameter."
+    },
+    "Q027": {
+      "before": {
+        "question": "What formats does datetime.datetime.fromisoformat() parse in Python 3.11 and 3.12?",
+        "expected_answer": "In Python 3.11+, datetime.fromisoformat(date_string) parses any valid ISO 8601 format (including time zone offsets with fractional seconds and 'T' replaced by any single separator), unlike earlier versions which only parsed formats emitted by isoformat().",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_datetime::api_datetime.datetime.fromisoformat::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a datetime corresponding to a date_string in any valid ISO 8601 format",
+            "doc_path": "library/datetime.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What formats does datetime.datetime.fromisoformat() parse in Python 3.11 and 3.12?",
+        "expected_answer": "In Python 3.11+, datetime.fromisoformat(date_string) parses any valid ISO 8601 format (including time zone offsets with fractional seconds and 'T' replaced by any single separator), unlike earlier versions which only parsed formats emitted by isoformat().",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_datetime::api_datetime.datetime.fromisoformat::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a datetime corresponding to a date_string in any valid ISO 8601 format, with the following exceptions: Time zone offsets may have fractional seconds. The T separator may be replaced by any single unicode character.",
+            "doc_path": "library/datetime.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include ISO 8601 parsing rules and the Python 3.11 enhancement clause."
+    },
+    "Q028": {
+      "before": {
+        "question": "What is enum.StrEnum and how does it compare to regular Enum?",
+        "expected_answer": "enum.StrEnum is a subclass of Enum whose members are also strings (subclasses of str). StrEnum members compare directly with other strings using standard equality.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_enum::api_enum.StrEnum::0",
+            "relevance_score": 3,
+            "evidence_text": "StrEnum is the same as Enum, but its members are also strings",
+            "doc_path": "library/enum.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is enum.StrEnum and how does it compare to regular Enum?",
+        "expected_answer": "enum.StrEnum is a subclass of Enum whose members are also strings (subclasses of str). StrEnum members compare directly with other strings using standard equality.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_enum::api_enum.StrEnum::0",
+            "relevance_score": 3,
+            "evidence_text": "StrEnum is the same as Enum, but its members are also strings and can be used in most of the same places that a string can be used. The result of any string operation performed on or with a StrEnum member is not part of the enumeration.",
+            "doc_path": "library/enum.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include string compatibility and equality comparison behavior."
+    },
+    "Q029": {
+      "before": {
+        "question": "What does uuid.uuid4() generate and what class is returned?",
+        "expected_answer": "uuid.uuid4() generates a random UUID (version 4) using os.urandom(), returning a uuid.UUID object instance.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_uuid::api_uuid.uuid4::0",
+            "relevance_score": 3,
+            "evidence_text": "Generate a random UUID.",
+            "doc_path": "library/uuid.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What does uuid.uuid4() generate and what class is returned?",
+        "expected_answer": "uuid.uuid4() generates a random UUID (version 4) using os.urandom(), returning a uuid.UUID object instance.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_uuid::api_uuid.uuid4::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: uuid. uuid4 ( )\n\nGenerate a random UUID.",
+            "doc_path": "library/uuid.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include signature and random generation description."
+    },
+    "Q030": {
+      "before": {
+        "question": "What clock does time.perf_counter() use and what is its primary use case?",
+        "expected_answer": "time.perf_counter() returns the value of a monotonic performance counter with the highest available resolution to measure short durations (benchmarking). It is unaffected by system clock updates.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_time::api_time.perf_counter::0",
+            "relevance_score": 3,
+            "evidence_text": "Return the value (in fractional seconds) of a performance counter",
+            "doc_path": "library/time.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What clock does time.perf_counter() use and what is its primary use case?",
+        "expected_answer": "time.perf_counter() returns the value of a monotonic performance counter with the highest available resolution to measure short durations (benchmarking). It is unaffected by system clock updates.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_time::api_time.perf_counter::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: time. perf_counter ( ) → float\n\nReturn the value (in fractional seconds) of a performance counter, i.e. a clock with the highest available resolution to measure a short duration.",
+            "doc_path": "library/time.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include float return type and highest available resolution description."
+    },
+    "Q036": {
+      "before": {
+        "question": "How does defining __slots__ in a class affect memory allocation and instance attributes?",
+        "expected_answer": "__slots__ reserves space for a fixed set of attributes and suppresses the creation of an instance __dict__ (unless explicitly included), reducing memory consumption and preventing arbitrary attribute assignment on instances.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_datamodel::sec_slots::0",
+            "relevance_score": 3,
+            "evidence_text": "__slots__",
+            "doc_path": "reference/datamodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does defining __slots__ in a class affect memory allocation and instance attributes?",
+        "expected_answer": "__slots__ reserves space for a fixed set of attributes and suppresses the creation of an instance __dict__ (unless explicitly included), reducing memory consumption and preventing arbitrary attribute assignment on instances.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_datamodel::sec_slots::0",
+            "relevance_score": 3,
+            "evidence_text": "__slots__ allow us to explicitly declare data members (like properties) and deny the creation of __dict__ and __weakref__ (unless explicitly declared in __slots__ or available in a parent.) The space saved over using __dict__ can be significant.",
+            "doc_path": "reference/datamodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence was a single token ('__slots__'); expanded to substantive passage explaining memory saving and __dict__ suppression."
+    },
+    "Q055": {
+      "before": {
+        "question": "How does PEP 695 type parameter syntax simplify generic classes and functions in Python 3.12?",
+        "expected_answer": "PEP 695 introduces compact generic syntax (e.g., class Stack[T]: and def func[T](x: T) -> T:) and the type alias statement (type Point = tuple[float, float]), eliminating verbose TypeVar and Generic boilerplate.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_pep-695-type-parameter-syntax::0",
+            "relevance_score": 3,
+            "evidence_text": "PEP 695: Type Parameter Syntax",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does PEP 695 type parameter syntax simplify generic classes and functions in Python 3.12?",
+        "expected_answer": "PEP 695 introduces compact generic syntax (e.g., class Stack[T]: and def func[T](x: T) -> T:) and the type alias statement (type Point = tuple[float, float]), eliminating verbose TypeVar and Generic boilerplate.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_pep-695-type-parameter-syntax::0",
+            "relevance_score": 3,
+            "evidence_text": "PEP 695: Type Parameter Syntax Generic classes and functions under PEP 484 were declared using a verbose syntax that left the scope of type parameters unclear and required explicit declarations of variance. PEP 695 introduces a new, more compact and explicit way to create generic classes and functions: In addition, the PEP introduces a new way to declare type aliases using the type statement",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence was heading only; expanded to substantive passage explaining compact generic syntax and the type statement."
+    },
+    "Q056": {
+      "before": {
+        "question": "What lifecycle states can a coroutine object exist in according to inspect.getcoroutinestate?",
+        "expected_answer": "inspect.getcoroutinestate() can return one of four states: CORO_CREATED (waiting to start), CORO_RUNNING (currently executing), CORO_SUSPENDED (suspended at an await expression), or CORO_CLOSED (execution finished).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_inspect::api_inspect.getcoroutinestate::0",
+            "relevance_score": 3,
+            "evidence_text": "Get current state of a coroutine object.",
+            "doc_path": "library/inspect.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What lifecycle states can a coroutine object exist in according to inspect.getcoroutinestate?",
+        "expected_answer": "inspect.getcoroutinestate() can return one of four states: CORO_CREATED (waiting to start), CORO_RUNNING (currently executing), CORO_SUSPENDED (suspended at an await expression), or CORO_CLOSED (execution finished).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_inspect::api_inspect.getcoroutinestate::0",
+            "relevance_score": 3,
+            "evidence_text": "Get current state of a coroutine object. The function is intended to be used with coroutine objects created by async def functions, but will accept any coroutine-like object that has cr_running and cr_frame attributes. Possible states are: CORO_CREATED: Waiting to start execution. CORO_RUNNING: Currently being executed by the interpreter. CORO_SUSPENDED: Currently suspended at an await expression. CORO_CLOSED: Execution has completed.",
+            "doc_path": "library/inspect.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the exact enumeration of the 4 coroutine lifecycle states."
+    },
+    "Q060": {
+      "before": {
+        "question": "What is PEP 709 comprehension inlining in Python 3.12 and how does it improve performance?",
+        "expected_answer": "PEP 709 inlines list, dict, and set comprehensions into the containing code block rather than creating a temporary single-use function object, resulting in faster execution and reduced call overhead.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_pep-709-comprehension-inlining::0",
+            "relevance_score": 3,
+            "evidence_text": "PEP 709: Comprehension inlining",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is PEP 709 comprehension inlining in Python 3.12 and how does it improve performance?",
+        "expected_answer": "PEP 709 inlines list, dict, and set comprehensions into the containing code block rather than creating a temporary single-use function object, resulting in faster execution and reduced call overhead.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_pep-709-comprehension-inlining::0",
+            "relevance_score": 3,
+            "evidence_text": "PEP 709: Comprehension inlining Dictionary, list, and set comprehensions are now inlined, rather than creating a new single-use function object for each execution of the comprehension. This speeds up execution of a comprehension by up to two times.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence was heading only; expanded to substantive passage explaining inlining mechanism and speedup factor."
+    },
+    "Q062": {
+      "before": {
+        "question": "How do you define a generator-based context manager using @contextlib.contextmanager?",
+        "expected_answer": "Decorate a generator function with @contextlib.contextmanager, perform acquisition setup before yield, yield the resource, and perform teardown in a finally block.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_contextlib::api_contextlib.contextmanager::0",
+            "relevance_score": 3,
+            "evidence_text": "managed_resource",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you define a generator-based context manager using @contextlib.contextmanager?",
+        "expected_answer": "Decorate a generator function with @contextlib.contextmanager, perform acquisition setup before yield, yield the resource, and perform teardown in a finally block.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_contextlib::api_contextlib.contextmanager::0",
+            "relevance_score": 3,
+            "evidence_text": "from contextlib import contextmanager\n\n@contextmanager\ndef managed_resource(*args, **kwds):\n    # Code to acquire resource, e.g.:\n    resource = acquire_resource(*args, **kwds)\n    try:\n        yield resource\n    finally:\n        # Code to release resource, e.g.:\n        release_resource(resource)",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence was a single variable name; expanded to full context manager generator code example."
+    },
+    "Q063": {
+      "before": {
+        "question": "How do you create an INET streaming socket in Python using the socket module?",
+        "expected_answer": "Call s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) to create a TCP streaming socket with IPv4 addressing.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_sockets::sec_creating-a-socket::1",
+            "relevance_score": 3,
+            "evidence_text": "socket.socket",
+            "doc_path": "howto/sockets.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you create an INET streaming socket in Python using the socket module?",
+        "expected_answer": "Call s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) to create a TCP streaming socket with IPv4 addressing.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_sockets::sec_creating-a-socket::1",
+            "relevance_score": 3,
+            "evidence_text": "# create an INET, STREAMing socket\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# now connect to the web server on port 80 - the normal http port\ns.connect((\"www.python.org\", 80))",
+            "doc_path": "howto/sockets.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence was single symbol; expanded to complete socket creation and connection code example."
+    },
+    "Q064": {
+      "before": {
+        "question": "How can you sort a list of tuples by a specific index using a key function in Python?",
+        "expected_answer": "Pass a lambda or key function to sorted(data, key=lambda student: student[2]) or list.sort(key=...) to extract the sorting comparison key from each element.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_sorting::sec_key-functions::0",
+            "relevance_score": 3,
+            "evidence_text": "student_tuples",
+            "doc_path": "howto/sorting.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How can you sort a list of tuples by a specific index using a key function in Python?",
+        "expected_answer": "Pass a lambda or key function to sorted(data, key=lambda student: student[2]) or list.sort(key=...) to extract the sorting comparison key from each element.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_sorting::sec_key-functions::0",
+            "relevance_score": 3,
+            "evidence_text": ">>> student_tuples = [\n...     ('john', 'A', 15),\n...     ('jane', 'B', 12),\n...     ('dave', 'B', 10),\n... ]\n>>> sorted(student_tuples, key=lambda student: student[2])   # sort by age\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]",
+            "doc_path": "howto/sorting.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full tuple list sorting code block."
+    },
+    "Q065": {
+      "before": {
+        "question": "How do you set up a basic command-line argument parser with argparse?",
+        "expected_answer": "Import argparse, instantiate parser = argparse.ArgumentParser(), add arguments with parser.add_argument(), and invoke args = parser.parse_args().",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_argparse::sec_the-basics::0",
+            "relevance_score": 3,
+            "evidence_text": "parser = argparse.ArgumentParser()",
+            "doc_path": "howto/argparse.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you set up a basic command-line argument parser with argparse?",
+        "expected_answer": "Import argparse, instantiate parser = argparse.ArgumentParser(), add arguments with parser.add_argument(), and invoke args = parser.parse_args().",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_argparse::sec_the-basics::0",
+            "relevance_score": 3,
+            "evidence_text": "import argparse\nparser = argparse.ArgumentParser()\nparser.parse_args()",
+            "doc_path": "howto/argparse.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to complete 3-line basic argparse script block."
+    },
+    "Q068": {
+      "before": {
+        "question": "How do you retain references to background asyncio tasks to avoid garbage collection?",
+        "expected_answer": "Maintain a strong reference in a collection: background_tasks = set(); task = asyncio.create_task(coro()); background_tasks.add(task); task.add_done_callback(background_tasks.discard).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_asyncio-task::api_asyncio.create_task::0",
+            "relevance_score": 3,
+            "evidence_text": "background_tasks = set()",
+            "doc_path": "library/asyncio-task.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you retain references to background asyncio tasks to avoid garbage collection?",
+        "expected_answer": "Maintain a strong reference in a collection: background_tasks = set(); task = asyncio.create_task(coro()); background_tasks.add(task); task.add_done_callback(background_tasks.discard).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_asyncio-task::api_asyncio.create_task::0",
+            "relevance_score": 3,
+            "evidence_text": "background_tasks = set()\n\nfor i in range(10):\n    task = asyncio.create_task(some_coro(param=i))\n\n    # Add task to the set. This creates a strong reference.\n    background_tasks.add(task)\n\n    # To prevent keeping references to finished tasks forever,\n    # make each task remove its own reference from the set after\n    # completion:\n    task.add_done_callback(background_tasks.discard)",
+            "doc_path": "library/asyncio-task.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to complete background task reference retention code block."
+    },
+    "Q070": {
+      "before": {
+        "question": "How do you define a basic data class with type annotations using @dataclass?",
+        "expected_answer": "Import dataclass from dataclasses, decorate the class with @dataclass, and define fields with type annotations (e.g. x: int, y: float = 0.0) to auto-generate __init__, __repr__, and __eq__.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_dataclasses::api_dataclasses.dataclass::3",
+            "relevance_score": 3,
+            "evidence_text": "class C:",
+            "doc_path": "library/dataclasses.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you define a basic data class with type annotations using @dataclass?",
+        "expected_answer": "Import dataclass from dataclasses, decorate the class with @dataclass, and define fields with type annotations (e.g. x: int, y: float = 0.0) to auto-generate __init__, __repr__, and __eq__.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_dataclasses::api_dataclasses.dataclass::3",
+            "relevance_score": 3,
+            "evidence_text": "@dataclass\nclass C:\n    a: int       # 'a' has no default value\n    b: int = 0   # assign a default value for 'b'",
+            "doc_path": "library/dataclasses.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to complete dataclass definition with typed fields and default values."
+    },
+    "Q072": {
+      "before": {
+        "question": "How do you write structured dictionaries into a CSV file with headers using csv.DictWriter?",
+        "expected_answer": "Instantiate writer = csv.DictWriter(csvfile, fieldnames=['first_name', 'last_name']), call writer.writeheader(), and write rows using writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'}).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_csv::api_csv.DictWriter::0",
+            "relevance_score": 3,
+            "evidence_text": "csv.DictWriter",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you write structured dictionaries into a CSV file with headers using csv.DictWriter?",
+        "expected_answer": "Instantiate writer = csv.DictWriter(csvfile, fieldnames=['first_name', 'last_name']), call writer.writeheader(), and write rows using writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'}).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_csv::api_csv.DictWriter::0",
+            "relevance_score": 3,
+            "evidence_text": "import csv\n\nwith open('names.csv', 'w', newline='') as csvfile:\n    fieldnames = ['first_name', 'last_name']\n    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)\n\n    writer.writeheader()\n    writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'})",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to complete CSV DictWriter file-writing code example."
+    },
+    "Q073": {
+      "before": {
+        "question": "How can you group elements into a list of items sharing the same key using collections.defaultdict?",
+        "expected_answer": "Create d = defaultdict(list) and append items with d[key].append(value). When a key is first accessed, an empty list is automatically created.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_collections::sec_defaultdict-examples::0",
+            "relevance_score": 3,
+            "evidence_text": "defaultdict(list)",
+            "doc_path": "library/collections.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How can you group elements into a list of items sharing the same key using collections.defaultdict?",
+        "expected_answer": "Create d = defaultdict(list) and append items with d[key].append(value). When a key is first accessed, an empty list is automatically created.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_collections::sec_defaultdict-examples::0",
+            "relevance_score": 3,
+            "evidence_text": ">>> s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]\n>>> d = defaultdict(list)\n>>> for k, v in s:\n...     d[k].append(v)\n...\n>>> sorted(d.items())\n[('blue', [2, 4]), ('red', [1]), ('yellow', [1, 3])]",
+            "doc_path": "library/collections.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to complete defaultdict(list) grouping code block."
+    },
+    "Q080": {
+      "before": {
+        "question": "How do you extract multiple fields from dictionaries or tuples using operator.itemgetter?",
+        "expected_answer": "Instantiate f = operator.itemgetter(1, 3) and call f(data), which fetches elements at indices 1 and 3 as a tuple.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_operator::api_operator.itemgetter::0",
+            "relevance_score": 3,
+            "evidence_text": "itemgetter",
+            "doc_path": "library/operator.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you extract multiple fields from dictionaries or tuples using operator.itemgetter?",
+        "expected_answer": "Instantiate f = operator.itemgetter(1, 3) and call f(data), which fetches elements at indices 1 and 3 as a tuple.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_operator::api_operator.itemgetter::0",
+            "relevance_score": 3,
+            "evidence_text": ">>> itemgetter(1)('ABCDEFG')\n'B'\n>>> itemgetter(1, 3, 5)('ABCDEFG')\n('B', 'D', 'F')",
+            "doc_path": "library/operator.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to multi-item getter code block."
+    },
+    "Q087": {
+      "before": {
+        "question": "How do you mock a class or function during unit tests using @unittest.mock.patch?",
+        "expected_answer": "Decorate the test function with @patch('module.TargetClass') and accept the mocked object as a parameter in the test method definition.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_unittest.mock::sec_patch::0",
+            "relevance_score": 3,
+            "evidence_text": "@patch('__main__.SomeClass')",
+            "doc_path": "library/unittest.mock.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you mock a class or function during unit tests using @unittest.mock.patch?",
+        "expected_answer": "Decorate the test function with @patch('module.TargetClass') and accept the mocked object as a parameter in the test method definition.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_unittest.mock::sec_patch::0",
+            "relevance_score": 3,
+            "evidence_text": ">>> @patch('__main__.SomeClass')\n... def function(normal_argument, mock_class):\n...     print(mock_class is SomeClass)\n...\n>>> function(None)\nTrue",
+            "doc_path": "library/unittest.mock.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to complete function patching code block."
+    },
+    "Q088": {
+      "before": {
+        "question": "How do you take the first n elements of an iterable according to the itertools recipes?",
+        "expected_answer": "Implement the take(n, iterable) recipe: def take(n, iterable): return list(islice(iterable, n)).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::sec_itertools-recipes::0",
+            "relevance_score": 3,
+            "evidence_text": "def take(n, iterable):",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you take the first n elements of an iterable according to the itertools recipes?",
+        "expected_answer": "Implement the take(n, iterable) recipe: def take(n, iterable): return list(islice(iterable, n)).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::sec_itertools-recipes::0",
+            "relevance_score": 3,
+            "evidence_text": "def take(n, iterable):\n    \"Return first n items of the iterable as a list.\"\n    return list(islice(iterable, n))",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full function definition."
+    },
+    "Q089": {
+      "before": {
+        "question": "How do you consume or advance an iterator n steps without storing the items in memory?",
+        "expected_answer": "Implement the consume(iterator, n=None) recipe using collections.deque(islice(iterator, n), maxlen=0).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::sec_itertools-recipes::1",
+            "relevance_score": 3,
+            "evidence_text": "def consume(iterator, n=None):",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you consume or advance an iterator n steps without storing the items in memory?",
+        "expected_answer": "Implement the consume(iterator, n=None) recipe using collections.deque(islice(iterator, n), maxlen=0).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::sec_itertools-recipes::1",
+            "relevance_score": 3,
+            "evidence_text": "def consume(iterator, n=None):\n    \"Advance the iterator n-steps ahead. If n is None, consume entirely.\"\n    # Use functions that consume iterators at C speed.\n    if n is None:\n        collections.deque(iterator, maxlen=0)\n    else:\n        next(islice(iterator, n, n), None)",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full function definition."
+    },
+    "Q090": {
+      "before": {
+        "question": "How do you define a function that prints a Fibonacci series up to n in Python?",
+        "expected_answer": "Define def fib(n): a, b = 0, 1; while a < n: print(a, end=' '); a, b = b, a+b; print().",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_controlflow::sec_defining-functions::1",
+            "relevance_score": 3,
+            "evidence_text": "def fib(n):",
+            "doc_path": "tutorial/controlflow.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do you define a function that prints a Fibonacci series up to n in Python?",
+        "expected_answer": "Define def fib(n): a, b = 0, 1; while a < n: print(a, end=' '); a, b = b, a+b; print().",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_controlflow::sec_defining-functions::1",
+            "relevance_score": 3,
+            "evidence_text": ">>> def fib(n):    # write Fibonacci series less than n\n...     \"\"\"Print a Fibonacci series less than n.\"\"\"\n...     a, b = 0, 1\n...     while a < n:\n...         print(a, end=' ')\n...         a, b = b, a+b\n...     print()",
+            "doc_path": "tutorial/controlflow.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full interactive function definition and execution code block."
+    },
+    "Q104": {
+      "before": {
+        "question": "How did pdb improve in Python 3.12 regarding convenience and syntax highlighting?",
+        "expected_answer": "In Python 3.12, the pdb debugger added convenience commands, improved multiline statement support, and terminal color support.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_pdb::0",
+            "relevance_score": 3,
+            "evidence_text": "pdb",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How did pdb improve in Python 3.12 regarding convenience and syntax highlighting?",
+        "expected_answer": "In Python 3.12, the pdb debugger added convenience variables to hold values temporarily for a debug session and provide quick access to values like the current frame or the return value.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_pdb::0",
+            "relevance_score": 3,
+            "evidence_text": "pdb Add convenience variables to hold values temporarily for debug session and provide quick access to values like the current frame or the return value. (Contributed by Tian Gao in gh-103693.)",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Corrected expected answer and evidence to match the exact documented change in Python 3.12: adding convenience variables to hold values temporarily for a debug session."
+    },
+    "Q105": {
+      "before": {
+        "question": "How did error handling in shutil.rmtree change in Python 3.12?",
+        "expected_answer": "In Python 3.12, shutil.rmtree() added the onexc parameter to replace the deprecated onerror callback for custom exception handling during tree removal.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_shutil::0",
+            "relevance_score": 3,
+            "evidence_text": "shutil.rmtree",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How did error handling in shutil.rmtree change in Python 3.12?",
+        "expected_answer": "In Python 3.12, shutil.rmtree() added the onexc parameter to replace the deprecated onerror callback for custom exception handling during tree removal.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_shutil::0",
+            "relevance_score": 3,
+            "evidence_text": "shutil.rmtree() now accepts a new argument onexc which is an error handler like onerror but which expects an exception instance rather than a (typ, val, tb) triplet. onerror is deprecated.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full sentence explaining onexc and onerror deprecation."
+    },
+    "Q109": {
+      "before": {
+        "question": "What happened to smtpd in Python 3.12?",
+        "expected_answer": "The smtpd module was removed in Python 3.12. Users needing an SMTP server should use aiosmtpd or third-party alternatives.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_smtpd::0",
+            "relevance_score": 3,
+            "evidence_text": "smtpd",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What happened to smtpd in Python 3.12?",
+        "expected_answer": "The smtpd module was removed in Python 3.12. Users needing an SMTP server should use aiosmtpd or third-party alternatives.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_smtpd::0",
+            "relevance_score": 3,
+            "evidence_text": "smtpd The smtpd module has been removed according to the schedule in PEP 594, having been deprecated in Python 3.4.7 and 3.5.4. Use the aiosmtpd PyPI module or any other asyncio-based server instead.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full sentence explaining PEP 594 removal schedule and recommendation to use aiosmtpd."
+    },
+    "Q111": {
+      "before": {
+        "question": "What type code was removed from array.array in Python 3.12?",
+        "expected_answer": "In Python 3.12, the 'u' (Py_UNICODE) type code was removed from array.array following the removal of the Py_UNICODE C-API in Python 3.11.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_array::0",
+            "relevance_score": 3,
+            "evidence_text": "array",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What type code in array.array is scheduled for pending removal in Python 3.16, and what should be used instead?",
+        "expected_answer": "In Python 3.12 documentation under pending removal in Python 3.16, the array.array 'u' type code (wchar_t) is deprecated and scheduled for removal; developers should use the 'w' type instead (Py_UCS4).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_pending-removal-in-python-3-16::0",
+            "relevance_score": 3,
+            "evidence_text": "array: array.array 'u' type (wchar_t): use the 'w' type instead (Py_UCS4).",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Factual correction: array.array 'u' type code was not removed in 3.12, but rather documented for Pending Removal in Python 3.16 (deprecated in favor of 'w' / Py_UCS4). Question, expected answer, chunk reference, and evidence updated to match the authoritative Python 3.12 documentation."
+    },
+    "Q112": {
+      "before": {
+        "question": "How did tokenize change in Python 3.12 to support PEP 701 f-strings?",
+        "expected_answer": "The tokenize module added new token types (such as FSTRING_START, FSTRING_MIDDLE, and FSTRING_END) in Python 3.12 to support exact syntactic tokenization of f-strings.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_tokenize::0",
+            "relevance_score": 3,
+            "evidence_text": "tokenize",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How did tokenize change in Python 3.12 to support PEP 701 f-strings?",
+        "expected_answer": "The tokenize module added new token types (such as FSTRING_START, FSTRING_MIDDLE, and FSTRING_END) in Python 3.12 to support exact syntactic tokenization of f-strings.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_changes-in-the-python-api::2",
+            "relevance_score": 3,
+            "evidence_text": "FSTRING_START",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "whatsnew_3.12::sec_tokenize::0",
+            "relevance_score": 2,
+            "evidence_text": "tokenize The tokenize module includes the changes introduced in PEP 701. (Contributed by Marta Gómez Macías and Pablo Galindo in gh-102856.)",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Added primary chunk from Porting to Python 3.12 containing the exact token types (FSTRING_START, FSTRING_MIDDLE, FSTRING_END) as score 3 evidence, while retaining the high-level overview chunk as score 2 supporting context."
+    },
+    "Q113": {
+      "before": {
+        "question": "What changes were made to zipimport in Python 3.12?",
+        "expected_answer": "In Python 3.12, zipimport methods load_module() and find_module() were removed following their deprecation, adhering to the standard importlib ABC specifications.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_zipimport::0",
+            "relevance_score": 3,
+            "evidence_text": "zipimport",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What changes were made to zipimport in Python 3.12?",
+        "expected_answer": "In Python 3.12, zipimport methods find_loader() and find_module() were removed (deprecated since Python 3.10); developers should use find_spec() instead per PEP 451.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_zipimport::0",
+            "relevance_score": 3,
+            "evidence_text": "zipimport Remove zipimport’s find_loader() and find_module() methods, deprecated in Python 3.10: use the find_spec() method instead. See PEP 451 for the rationale.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Corrected expected answer: the methods removed were find_loader() and find_module() (not load_module), recommending find_spec() per PEP 451. Evidence expanded to full sentence."
+    },
+    "Q114": {
+      "before": {
+        "question": "What legacy function was removed from the ssl module in Python 3.12?",
+        "expected_answer": "The ssl.wrap_socket() top-level function was removed in Python 3.12. Applications must use ssl.SSLContext.wrap_socket() instead.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_ssl::0",
+            "relevance_score": 3,
+            "evidence_text": "ssl",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What deprecated pseudo-random function was removed from the ssl module in Python 3.12, and what should be used instead?",
+        "expected_answer": "In Python 3.12, ssl.RAND_pseudo_bytes() was removed (deprecated since Python 3.6). Applications should use os.urandom() or ssl.RAND_bytes() instead.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_ssl::0",
+            "relevance_score": 3,
+            "evidence_text": "Remove ssl’s ssl.RAND_pseudo_bytes() function, deprecated in Python 3.6: use os.urandom() or ssl.RAND_bytes() instead.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Factual correction: whatsnew 3.12 removed ssl.RAND_pseudo_bytes() (deprecated since 3.6), recommending os.urandom() or ssl.RAND_bytes(). Question, answer, and evidence aligned with the authoritative Python 3.12 release notes."
+    },
+    "Q116": {
+      "before": {
+        "question": "What monitoring namespace was added to sys in Python 3.12?",
+        "expected_answer": "Python 3.12 added the sys.monitoring namespace under PEP 669, allowing tools to register callbacks for code execution events such as LINE, CALL, and RETURN.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_sys::0",
+            "relevance_score": 3,
+            "evidence_text": "sys.monitoring",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What monitoring namespace was added to sys in Python 3.12?",
+        "expected_answer": "Python 3.12 added the sys.monitoring namespace under PEP 669, allowing tools to register callbacks for code execution events such as LINE, CALL, and RETURN.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_sys::0",
+            "relevance_score": 3,
+            "evidence_text": "sys Add the sys.monitoring namespace to expose the new PEP 669 monitoring API.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full sentence explaining PEP 669 namespace exposure."
+    },
+    "Q117": {
+      "before": {
+        "question": "What constants were added to the calendar module in Python 3.12?",
+        "expected_answer": "Python 3.12 introduced Month and Day enumeration constants in the calendar module for cleaner day and month handling.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_calendar::0",
+            "relevance_score": 3,
+            "evidence_text": "calendar",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What constants were added to the calendar module in Python 3.12?",
+        "expected_answer": "Python 3.12 introduced Month and Day enumeration constants in the calendar module for cleaner day and month handling.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_calendar::0",
+            "relevance_score": 3,
+            "evidence_text": "calendar Add enums calendar.Month and calendar.Day defining months of the year and days of the week.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full sentence describing the added Month and Day enums."
+    },
+    "Q118": {
+      "before": {
+        "question": "What interpolation change occurred in configparser in Python 3.12?",
+        "expected_answer": "In Python 3.12, configparser deprecated the legacy SafeConfigParser alias and made ExtendedInterpolation and BasicInterpolation behavior stricter.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_configparser::0",
+            "relevance_score": 3,
+            "evidence_text": "configparser",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What deprecated classes and methods were removed from configparser in Python 3.12?",
+        "expected_answer": "In Python 3.12, configparser removed the legacy SafeConfigParser class (use ConfigParser instead), removed the filename attribute from ParsingError (use source instead), and removed the ConfigParser.readfp method (use read_file instead).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_configparser::0",
+            "relevance_score": 3,
+            "evidence_text": "configparser Several names deprecated in the configparser way back in 3.2 have been removed per gh-89336: configparser.ParsingError no longer has a filename attribute or argument. Use the source attribute and argument instead. configparser no longer has a SafeConfigParser class. Use the shorter ConfigParser name instead. configparser.ConfigParser no longer has a readfp method. Use read_file() instead.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Corrected question and expected answer to match the exact documented removals in Python 3.12: SafeConfigParser class removed in favor of ConfigParser, readfp removed in favor of read_file, and filename attribute removed from ParsingError."
+    },
+    "Q119": {
+      "before": {
+        "question": "How did inspect.getmembers_static() behavior change in Python 3.12?",
+        "expected_answer": "In Python 3.12, inspect.getmembers_static() was enhanced to better inspect object attributes without triggering dynamic evaluation or property descriptors.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_inspect::0",
+            "relevance_score": 3,
+            "evidence_text": "inspect",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What performance improvement was made to inspect.getattr_static() in Python 3.12?",
+        "expected_answer": "In Python 3.12, the performance of inspect.getattr_static() was considerably improved, with most calls being at least 2x faster than in Python 3.11.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "whatsnew_3.12::sec_inspect::0",
+            "relevance_score": 3,
+            "evidence_text": "The performance of inspect.getattr_static() has been considerably improved. Most calls to the function should be at least 2x faster than they were in Python 3.11.",
+            "doc_path": "whatsnew/3.12.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Corrected question, answer, and evidence: Python 3.12 improved the performance of inspect.getattr_static() by at least 2x (rather than getmembers_static)."
+    },
+    "Q128": {
+      "before": {
+        "question": "What causes an AttributeError and what attributes were added to it in Python 3.10 to aid debugging?",
+        "expected_answer": "AttributeError is raised when an attribute reference or assignment fails. In Python 3.10, the name and obj attributes were added to the exception object to identify the attempted attribute name and target object programmatically.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_exceptions::api_AttributeError::0",
+            "relevance_score": 3,
+            "evidence_text": "Raised when an attribute reference (see Attribute references) or assignment fails.",
+            "doc_path": "library/exceptions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What causes an AttributeError and what attributes were added to it in Python 3.10 to aid debugging?",
+        "expected_answer": "AttributeError is raised when an attribute reference or assignment fails. In Python 3.10, the name and obj attributes were added to the exception object to identify the attempted attribute name and target object programmatically.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_exceptions::api_AttributeError::0",
+            "relevance_score": 3,
+            "evidence_text": "Raised when an attribute reference (see Attribute references) or assignment fails. (When an object does not support attribute references or attribute assignments at all, TypeError is raised.) The name and obj attributes can be set using keyword-only arguments to the constructor. When set they represent the name of the attribute that was attempted to be accessed and the object that was accessed for said attribute, respectively. Changed in version 3.10: Added the name and obj attributes.",
+            "doc_path": "library/exceptions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the exact passage explaining the name and obj attributes added in Python 3.10."
+    },
+    "Q130": {
+      "before": {
+        "question": "What is the distinction between TypeError and ValueError in Python exception handling?",
+        "expected_answer": "TypeError is raised when an operation is applied to an object of inappropriate type (e.g. passing a string to math.sqrt). ValueError is raised when an argument has the right type but an inappropriate value (e.g. passing a negative number to math.sqrt).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_exceptions::api_TypeError::0",
+            "relevance_score": 3,
+            "evidence_text": "Raised when an operation or function is applied to an object of inappropriate type.",
+            "doc_path": "library/exceptions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the distinction between TypeError and ValueError in Python exception handling?",
+        "expected_answer": "TypeError is raised when an operation is applied to an object of inappropriate type (e.g. passing a string to math.sqrt). ValueError is raised when an argument has the right type but an inappropriate value (e.g. passing a negative number to math.sqrt).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_exceptions::api_TypeError::0",
+            "relevance_score": 3,
+            "evidence_text": "Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.",
+            "doc_path": "library/exceptions.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_exceptions::api_ValueError::0",
+            "relevance_score": 3,
+            "evidence_text": "Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError.",
+            "doc_path": "library/exceptions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Added the counterpart ValueError chunk (score 3) so that both sides of the TypeError vs ValueError distinction are fully evidenced."
+    },
+    "Q136": {
+      "before": {
+        "question": "What causes Python to emit a ResourceWarning and how can it be made visible?",
+        "expected_answer": "ResourceWarning is emitted for resource leaks such as unclosed files or sockets. By default it is ignored, but enabling Python Development Mode (-X dev) or setting PYTHONWARNINGS=always displays it.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_exceptions::api_ResourceWarning::0",
+            "relevance_score": 3,
+            "evidence_text": "Base class for warnings related to resource usage.",
+            "doc_path": "library/exceptions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What causes Python to emit a ResourceWarning and how can it be made visible?",
+        "expected_answer": "ResourceWarning is emitted for resource leaks such as unclosed files or sockets. By default it is ignored, but enabling Python Development Mode (-X dev) or setting PYTHONWARNINGS=always displays it.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_exceptions::api_ResourceWarning::0",
+            "relevance_score": 3,
+            "evidence_text": "Base class for warnings related to resource usage. Ignored by the default warning filters. Enabling the Python Development Mode shows this warning.",
+            "doc_path": "library/exceptions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include how the warning is displayed (enabling Python Development Mode)."
+    },
+    "Q140": {
+      "before": {
+        "question": "What information does json.JSONDecodeError provide when JSON parsing fails?",
+        "expected_answer": "json.JSONDecodeError (a subclass of ValueError) provides the failure msg, the original doc string, the character position pos, the line number lineno, and the column number colno.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_json::api_json.JSONDecodeError::0",
+            "relevance_score": 3,
+            "evidence_text": "Subclass of ValueError with the following additional attributes:",
+            "doc_path": "library/json.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What information does json.JSONDecodeError provide when JSON parsing fails?",
+        "expected_answer": "json.JSONDecodeError (a subclass of ValueError) provides the failure msg, the original doc string, the character position pos, the line number lineno, and the column number colno.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_json::api_json.JSONDecodeError::0",
+            "relevance_score": 3,
+            "evidence_text": "Subclass of ValueError with the following additional attributes: msg The unformatted error message. doc The JSON document being parsed. pos The start index of doc where parsing failed. lineno The line corresponding to pos. colno The column corresponding to pos.",
+            "doc_path": "library/json.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include the exact attributes (msg, doc, pos, lineno, colno) defined in the exception class."
+    },
+    "Q143": {
+      "before": {
+        "question": "What happens when a thread calls acquire() on an already locked threading.Lock without a timeout?",
+        "expected_answer": "The acquiring thread blocks indefinitely until another thread releases the primitive lock. If the same thread attempts to acquire an un-reentrant Lock again, it deadlocks itself.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_threading::api_threading.Lock::0",
+            "relevance_score": 3,
+            "evidence_text": "The class implementing primitive lock objects.",
+            "doc_path": "library/threading.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What happens when a thread calls acquire() on an already locked threading.Lock without a timeout?",
+        "expected_answer": "The acquiring thread blocks indefinitely until another thread releases the primitive lock. If the same thread attempts to acquire an un-reentrant Lock again, it deadlocks itself.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_threading::api_threading.Lock::0",
+            "relevance_score": 3,
+            "evidence_text": "The class implementing primitive lock objects. Once a thread has acquired a lock, subsequent attempts to acquire it block, until it is released; any thread may release it.",
+            "doc_path": "library/threading.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include blocking behavior on locked primitive lock."
+    },
+    "Q147": {
+      "before": {
+        "question": "How does pathlib.Path compare to os.path for filesystem path manipulations?",
+        "expected_answer": "pathlib.Path provides an object-oriented API representing filesystem paths as class instances with rich methods (/ operator, .stat(), .read_text()), whereas os.path provides low-level procedural functions operating directly on raw string or byte representations.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_pathlib::api_pathlib.Path::0",
+            "relevance_score": 3,
+            "evidence_text": "Path",
+            "doc_path": "library/pathlib.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_os.path::api_os.path.join::0",
+            "relevance_score": 2,
+            "evidence_text": "Join one or more path segments",
+            "doc_path": "library/os.path.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does pathlib.Path compare to os.path for filesystem path manipulations?",
+        "expected_answer": "pathlib.Path provides an object-oriented API representing filesystem paths as class instances with rich methods (/ operator, .stat(), .read_text()), whereas os.path provides low-level procedural functions operating directly on raw string or byte representations.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_pathlib::api_pathlib.Path::0",
+            "relevance_score": 3,
+            "evidence_text": "A subclass of PurePath, this class represents concrete paths of the system’s path flavour",
+            "doc_path": "library/pathlib.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_os.path::api_os.path.join::0",
+            "relevance_score": 2,
+            "evidence_text": "Join one or more path segments intelligently. The return value is the concatenation of path and all members of *paths, with exactly one directory separator following each non-empty part, except the last.",
+            "doc_path": "library/os.path.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded from single words to substantive sentences defining both Path and os.path.join."
+    },
+    "Q148": {
+      "before": {
+        "question": "What is the primary difference in execution model and memory space between threading.Thread and multiprocessing.Process?",
+        "expected_answer": "threading.Thread runs activities within the same OS process sharing memory space (constrained by the Global Interpreter Lock for bytecode execution), while multiprocessing.Process spawns independent OS processes with separate memory spaces and individual GILs.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_threading::api_threading.Thread::0",
+            "relevance_score": 3,
+            "evidence_text": "Thread",
+            "doc_path": "library/threading.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_multiprocessing::api_multiprocessing.Process::0",
+            "relevance_score": 3,
+            "evidence_text": "Process",
+            "doc_path": "library/multiprocessing.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the primary difference in execution model and memory space between threading.Thread and multiprocessing.Process?",
+        "expected_answer": "threading.Thread runs activities within the same OS process sharing memory space (constrained by the Global Interpreter Lock for bytecode execution), while multiprocessing.Process spawns independent OS processes with separate memory spaces and individual GILs.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_threading::api_threading.Thread::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: class threading. Thread ( group = None , target = None , name = None , args = () , kwargs = {} , * , daemon = None )",
+            "doc_path": "library/threading.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_multiprocessing::api_multiprocessing.Process::0",
+            "relevance_score": 3,
+            "evidence_text": "Process objects represent activity that is run in a separate process. The Process class has equivalents of all the methods of threading.Thread.",
+            "doc_path": "library/multiprocessing.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full sentences describing Thread and Process execution units."
+    },
+    "Q150": {
+      "before": {
+        "question": "What are the key trade-offs between json and pickle for object serialization?",
+        "expected_answer": "json serializes standard data structures into human-readable, cross-language text format with strict security guarantees. pickle serializes almost arbitrary Python objects into a binary Python-specific format, but is insecure against arbitrary code execution when unpickling untrusted data.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_json::api_json.dumps::0",
+            "relevance_score": 3,
+            "evidence_text": "JSON",
+            "doc_path": "library/json.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_pickle::api_pickle.dumps::0",
+            "relevance_score": 3,
+            "evidence_text": "pickle",
+            "doc_path": "library/pickle.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What are the key trade-offs between json and pickle for object serialization?",
+        "expected_answer": "json serializes standard data structures into human-readable, cross-language text format with strict security guarantees. pickle serializes almost arbitrary Python objects into a binary Python-specific format, but is insecure against arbitrary code execution when unpickling untrusted data.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_json::api_json.dumps::0",
+            "relevance_score": 3,
+            "evidence_text": "Serialize obj to a JSON formatted str using this conversion table.",
+            "doc_path": "library/json.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_pickle::api_pickle.dumps::0",
+            "relevance_score": 3,
+            "evidence_text": "Return the pickled representation of the object obj as a bytes object, instead of writing it to a file.",
+            "doc_path": "library/pickle.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded from single words to exact serialization descriptions for both json and pickle."
+    },
+    "Q151": {
+      "before": {
+        "question": "How do dataclasses compare with collections.namedtuple for record storage?",
+        "expected_answer": "dataclasses generate customizable classes that are mutable by default (unless frozen=True) and integrate inheritance and default_factory. namedtuple creates lightweight immutable tuple subclasses accessible by index or name with smaller memory overhead.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_dataclasses::api_dataclasses.dataclass::3",
+            "relevance_score": 3,
+            "evidence_text": "dataclass",
+            "doc_path": "library/dataclasses.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_collections::api_collections.namedtuple::0",
+            "relevance_score": 3,
+            "evidence_text": "namedtuple",
+            "doc_path": "library/collections.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do dataclasses compare with collections.namedtuple for record storage?",
+        "expected_answer": "dataclasses generate customizable classes that are mutable by default (unless frozen=True) and integrate inheritance and default_factory. namedtuple creates lightweight immutable tuple subclasses accessible by index or name with smaller memory overhead.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_dataclasses::api_dataclasses.dataclass::3",
+            "relevance_score": 3,
+            "evidence_text": "Signature: @ dataclasses. dataclass ( * , init = True , repr = True , eq = True , order = False , unsafe_hash = False , frozen = False , match_args = True , kw_only = False , slots = False , weakref_slot = False )",
+            "doc_path": "library/dataclasses.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_collections::api_collections.namedtuple::0",
+            "relevance_score": 3,
+            "evidence_text": "Returns a new tuple subclass named typename. The new subclass is used to create tuple-like objects that have fields accessible by attribute lookup as well as being indexable and iterable.",
+            "doc_path": "library/collections.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full definitions for both dataclass and namedtuple."
+    },
+    "Q152": {
+      "before": {
+        "question": "How does queue.Queue differ from multiprocessing.Queue in inter-thread vs inter-process communication?",
+        "expected_answer": "queue.Queue is an in-memory thread-safe FIFO queue synchronized via threading primitives for threads in the same process. multiprocessing.Queue uses OS pipes, buffers, and background feeder threads to serialize (pickle) and transfer objects across separate process boundaries.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_queue::api_queue.Queue::0",
+            "relevance_score": 3,
+            "evidence_text": "FIFO",
+            "doc_path": "library/queue.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_multiprocessing::api_multiprocessing.Queue::0",
+            "relevance_score": 3,
+            "evidence_text": "queue",
+            "doc_path": "library/multiprocessing.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does queue.Queue differ from multiprocessing.Queue in inter-thread vs inter-process communication?",
+        "expected_answer": "queue.Queue is an in-memory thread-safe FIFO queue synchronized via threading primitives for threads in the same process. multiprocessing.Queue uses OS pipes, buffers, and background feeder threads to serialize (pickle) and transfer objects across separate process boundaries.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_queue::api_queue.Queue::0",
+            "relevance_score": 3,
+            "evidence_text": "Constructor for a FIFO queue. maxsize is an integer that sets the upperbound limit on the number of items that can be placed in the queue.",
+            "doc_path": "library/queue.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_multiprocessing::api_multiprocessing.Queue::0",
+            "relevance_score": 3,
+            "evidence_text": "Returns a process shared queue implemented using a pipe and a few locks/semaphores.",
+            "doc_path": "library/multiprocessing.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to constructor and mechanism descriptions for both thread-safe and process-safe queues."
+    },
+    "Q153": {
+      "before": {
+        "question": "What is the behavioral difference between list.sort() and the built-in sorted() function?",
+        "expected_answer": "list.sort() sorts a list in-place and returns None, modifying the original list. The built-in sorted() function accepts any iterable and returns a new sorted list leaving the source iterable unchanged.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_datastructures::sec_more-on-lists::0",
+            "relevance_score": 3,
+            "evidence_text": "sort",
+            "doc_path": "tutorial/datastructures.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_sorted::0",
+            "relevance_score": 3,
+            "evidence_text": "sorted",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the behavioral difference between list.sort() and the built-in sorted() function?",
+        "expected_answer": "list.sort() sorts a list in-place and returns None, modifying the original list. The built-in sorted() function accepts any iterable and returns a new sorted list leaving the source iterable unchanged.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_datastructures::sec_more-on-lists::0",
+            "relevance_score": 3,
+            "evidence_text": "You might have noticed that methods like insert, remove or sort that only modify the list have no return value printed – they return the default None.",
+            "doc_path": "tutorial/datastructures.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_sorted::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a new sorted list from the items in iterable.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to in-place mutation clause for list.sort and return-new-list clause for sorted()."
+    },
+    "Q154": {
+      "before": {
+        "question": "How does the 'is' identity comparison differ from the '==' equality operator in Python?",
+        "expected_answer": "The 'is' operator compares object identity (checking if two references point to the exact same memory address as verified by id()), whereas '==' evaluates value equality by invoking the __eq__() rich comparison method.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_expressions::sec_comparisons::0",
+            "relevance_score": 3,
+            "evidence_text": "Comparisons",
+            "doc_path": "reference/expressions.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_id::0",
+            "relevance_score": 2,
+            "evidence_text": "identity",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does the 'is' identity comparison differ from the '==' equality operator in Python?",
+        "expected_answer": "The 'is' operator compares object identity (checking if two references point to the exact same memory address as verified by id()), whereas '==' evaluates value equality by invoking the __eq__() rich comparison method.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_expressions::sec_is-not::0",
+            "relevance_score": 3,
+            "evidence_text": "The operators is and is not test for an object’s identity: x is y is true if and only if x and y are the same object. An Object’s identity is determined using the id() function.",
+            "doc_path": "reference/expressions.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_id::0",
+            "relevance_score": 2,
+            "evidence_text": "Return the “identity” of an object. This is an integer which is guaranteed to be unique and constant for this object during its lifetime.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to identity comparison description and id() uniqueness definition, referencing the dedicated identity comparisons section."
+    },
+    "Q156": {
+      "before": {
+        "question": "How does parsing command-line parameters with argparse compare to manually reading sys.argv?",
+        "expected_answer": "sys.argv is simply the raw list of string arguments passed to the script. argparse provides structured flag parsing, automatic --help generation, type coercion, subcommands, and default values.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_sys::api_sys.argv::0",
+            "relevance_score": 3,
+            "evidence_text": "command line arguments",
+            "doc_path": "library/sys.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "howto_argparse::sec_the-basics::0",
+            "relevance_score": 3,
+            "evidence_text": "ArgumentParser",
+            "doc_path": "howto/argparse.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does parsing command-line parameters with argparse compare to manually reading sys.argv?",
+        "expected_answer": "sys.argv is simply the raw list of string arguments passed to the script. argparse provides structured flag parsing, automatic --help generation, type coercion, subcommands, and default values.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_sys::api_sys.argv::0",
+            "relevance_score": 3,
+            "evidence_text": "The list of command line arguments passed to a Python script. argv[0] is the script name",
+            "doc_path": "library/sys.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "howto_argparse::sec_the-basics::0",
+            "relevance_score": 3,
+            "evidence_text": "import argparse\nparser = argparse.ArgumentParser()\nparser.parse_args()",
+            "doc_path": "howto/argparse.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to sys.argv description and argparse setup example."
+    },
+    "Q157": {
+      "before": {
+        "question": "What is the difference in abstraction level between urllib.request and http.client?",
+        "expected_answer": "urllib.request is a high-level URL fetching library supporting protocols, redirects, proxies, and authentication. http.client is a low-level client implementing HTTP and HTTPS protocols directly.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_urllib.request::api_urllib.request.urlopen::0",
+            "relevance_score": 3,
+            "evidence_text": "urlopen",
+            "doc_path": "library/urllib.request.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_http.client::api_http.client.HTTPConnection::0",
+            "relevance_score": 3,
+            "evidence_text": "HTTPConnection",
+            "doc_path": "library/http.client.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the difference in abstraction level between urllib.request and http.client?",
+        "expected_answer": "urllib.request is a high-level URL fetching library supporting protocols, redirects, proxies, and authentication. http.client is a low-level client implementing HTTP and HTTPS protocols directly.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_urllib.request::api_urllib.request.urlopen::0",
+            "relevance_score": 3,
+            "evidence_text": "Open url, which can be either a string containing a valid, properly encoded URL, or a Request object.",
+            "doc_path": "library/urllib.request.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_http.client::api_http.client.HTTPConnection::0",
+            "relevance_score": 3,
+            "evidence_text": "An HTTPConnection instance represents one transaction with an HTTP server.",
+            "doc_path": "library/http.client.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to functional descriptions for both libraries."
+    },
+    "Q158": {
+      "before": {
+        "question": "How does itertools.zip_longest handle iterables of unequal length compared to built-in zip()?",
+        "expected_answer": "Built-in zip() stops yielding pairs when the shortest iterable is exhausted (or raises ValueError if strict=True). itertools.zip_longest continues until the longest iterable is exhausted, substituting a fillvalue (default None) for missing values.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::api_itertools.zip_longest::0",
+            "relevance_score": 3,
+            "evidence_text": "zip_longest",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_zip::0",
+            "relevance_score": 3,
+            "evidence_text": "zip",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does itertools.zip_longest handle iterables of unequal length compared to built-in zip()?",
+        "expected_answer": "Built-in zip() stops yielding pairs when the shortest iterable is exhausted (or raises ValueError if strict=True). itertools.zip_longest continues until the longest iterable is exhausted, substituting a fillvalue (default None) for missing values.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_itertools::api_itertools.zip_longest::0",
+            "relevance_score": 3,
+            "evidence_text": "Make an iterator that aggregates elements from each of the iterables. If the iterables are of uneven length, missing values are filled-in with fillvalue.",
+            "doc_path": "library/itertools.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_zip::0",
+            "relevance_score": 3,
+            "evidence_text": "Iterate over several iterables in parallel, producing tuples with an item from each one.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to fillvalue behavior and parallel iteration definition."
+    },
+    "Q159": {
+      "before": {
+        "question": "What is the functional difference between cryptographic hashing with hashlib and message authentication with hmac?",
+        "expected_answer": "hashlib provides cryptographic digests (like SHA-256) verifying data integrity without a secret key. hmac combines a cryptographic hash with a shared secret key to verify both data integrity and sender authenticity.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_hashlib::sec_hash-algorithms::0",
+            "relevance_score": 3,
+            "evidence_text": "sha256",
+            "doc_path": "library/hashlib.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_hmac::api_hmac.new::0",
+            "relevance_score": 3,
+            "evidence_text": "hmac",
+            "doc_path": "library/hmac.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the functional difference between cryptographic hashing with hashlib and message authentication with hmac?",
+        "expected_answer": "hashlib provides cryptographic digests (like SHA-256) verifying data integrity without a secret key. hmac combines a cryptographic hash with a shared secret key to verify both data integrity and sender authenticity.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_hashlib::sec_hash-algorithms::0",
+            "relevance_score": 3,
+            "evidence_text": "There is one constructor method named for each type of hash. All return a hash object with the same simple interface. For example: use sha256() to create a SHA-256 hash object.",
+            "doc_path": "library/hashlib.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_hmac::api_hmac.new::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a new hmac object. key is a bytes or bytearray object giving the secret key.",
+            "doc_path": "library/hmac.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to sha256 constructor and secret key requirement for hmac."
+    },
+    "Q161": {
+      "before": {
+        "question": "How does data access differ between csv.reader and csv.DictReader?",
+        "expected_answer": "csv.reader parses each row into a list of strings accessed by integer index. csv.DictReader maps each row into an OrderedDict or dict with keys derived from the header line or fieldnames.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_csv::api_csv.reader::0",
+            "relevance_score": 3,
+            "evidence_text": "reader",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_csv::api_csv.DictReader::0",
+            "relevance_score": 3,
+            "evidence_text": "DictReader",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does data access differ between csv.reader and csv.DictReader?",
+        "expected_answer": "csv.reader parses each row into a list of strings accessed by integer index. csv.DictReader maps each row into an OrderedDict or dict with keys derived from the header line or fieldnames.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_csv::api_csv.reader::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a reader object that will process lines from the given csvfile.",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_csv::api_csv.DictReader::0",
+            "relevance_score": 3,
+            "evidence_text": "Create an object that operates like a regular reader but maps the information in each row to a dict whose keys are given by the optional fieldnames parameter.",
+            "doc_path": "library/csv.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to reader and DictReader mapping descriptions."
+    },
+    "Q162": {
+      "before": {
+        "question": "What is the key difference between tempfile.TemporaryFile and tempfile.NamedTemporaryFile?",
+        "expected_answer": "tempfile.TemporaryFile creates an anonymous file that has no directory entry on platforms that support it (unlinked immediately). tempfile.NamedTemporaryFile creates a file with a visible filesystem name accessible via .name.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_tempfile::api_tempfile.TemporaryFile::0",
+            "relevance_score": 3,
+            "evidence_text": "TemporaryFile",
+            "doc_path": "library/tempfile.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_tempfile::api_tempfile.NamedTemporaryFile::0",
+            "relevance_score": 3,
+            "evidence_text": "NamedTemporaryFile",
+            "doc_path": "library/tempfile.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the key difference between tempfile.TemporaryFile and tempfile.NamedTemporaryFile?",
+        "expected_answer": "tempfile.TemporaryFile creates an anonymous file that has no directory entry on platforms that support it (unlinked immediately). tempfile.NamedTemporaryFile creates a file with a visible filesystem name accessible via .name.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_tempfile::api_tempfile.TemporaryFile::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a file-like object that can be used as a temporary storage area. The file is created securely, using the same rules as mkstemp(). It will be destroyed as soon as it is closed (including an implicit close when the object is garbage collected).",
+            "doc_path": "library/tempfile.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_tempfile::api_tempfile.NamedTemporaryFile::0",
+            "relevance_score": 3,
+            "evidence_text": "This function operates exactly as TemporaryFile() does, except the following differences: This function returns a file that is guaranteed to have a visible name in the file system.",
+            "doc_path": "library/tempfile.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to unlinked anonymous file vs visible filesystem name contrast."
+    },
+    "Q163": {
+      "before": {
+        "question": "Why is the logging module preferred over print() statements in production Python applications?",
+        "expected_answer": "logging provides configurable severity levels, module filtering, automatic formatting (timestamps, process IDs), multiple destinations (files, network sockets), and runtime verbosity control without changing code.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_logging::api_logging.basicConfig::0",
+            "relevance_score": 3,
+            "evidence_text": "basicConfig",
+            "doc_path": "library/logging.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_print::0",
+            "relevance_score": 2,
+            "evidence_text": "print",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "Why is the logging module preferred over print() statements in production Python applications?",
+        "expected_answer": "logging provides configurable severity levels, module filtering, automatic formatting (timestamps, process IDs), multiple destinations (files, network sockets), and runtime verbosity control without changing code.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_logging::api_logging.basicConfig::0",
+            "relevance_score": 3,
+            "evidence_text": "Does basic configuration for the logging system by creating a StreamHandler with a default Formatter and adding it to the root logger.",
+            "doc_path": "library/logging.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_print::0",
+            "relevance_score": 2,
+            "evidence_text": "Print objects to the text stream file, separated by sep and followed by end.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to logging system configuration vs text stream printing."
+    },
+    "Q166": {
+      "before": {
+        "question": "How does math.sqrt differ from cmath.sqrt when passed a negative number?",
+        "expected_answer": "math.sqrt(-1) raises a ValueError because the math module is strictly for real-valued arithmetic. cmath.sqrt(-1) returns a complex number (1j) because cmath handles complex arithmetic.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_math::api_math.sqrt::0",
+            "relevance_score": 3,
+            "evidence_text": "sqrt",
+            "doc_path": "library/math.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_cmath::api_cmath.sqrt::0",
+            "relevance_score": 3,
+            "evidence_text": "sqrt",
+            "doc_path": "library/cmath.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does math.sqrt differ from cmath.sqrt when passed a negative number?",
+        "expected_answer": "math.sqrt(-1) raises a ValueError because the math module is strictly for real-valued arithmetic. cmath.sqrt(-1) returns a complex number (1j) because cmath handles complex arithmetic.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_math::api_math.sqrt::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: math. sqrt ( x )\n\nReturn the square root of x.",
+            "doc_path": "library/math.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_cmath::api_cmath.sqrt::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: cmath. sqrt ( z )\n\nReturn the square root of z.",
+            "doc_path": "library/cmath.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to function definitions for real vs complex square root."
+    },
+    "Q167": {
+      "before": {
+        "question": "What is the difference between blocking BSD sockets and asyncio streams for network communication?",
+        "expected_answer": "Standard socket operations block the calling OS thread until data arrives or timeouts expire. asyncio.open_connection provides StreamReader and StreamWriter instances that suspend coroutines cooperatively using non-blocking I/O.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_sockets::sec_creating-a-socket::1",
+            "relevance_score": 3,
+            "evidence_text": "socket",
+            "doc_path": "howto/sockets.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_asyncio-stream::api_asyncio.open_connection::0",
+            "relevance_score": 3,
+            "evidence_text": "open_connection",
+            "doc_path": "library/asyncio-stream.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the difference between blocking BSD sockets and asyncio streams for network communication?",
+        "expected_answer": "Standard socket operations block the calling OS thread until data arrives or timeouts expire. asyncio.open_connection provides StreamReader and StreamWriter instances that suspend coroutines cooperatively using non-blocking I/O.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "howto_sockets::sec_creating-a-socket::1",
+            "relevance_score": 3,
+            "evidence_text": "# create an INET, STREAMing socket\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+            "doc_path": "howto/sockets.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_asyncio-stream::api_asyncio.open_connection::0",
+            "relevance_score": 3,
+            "evidence_text": "Establish a network connection and return a pair of (reader, writer) objects. The returned reader and writer objects are instances of StreamReader and StreamWriter classes.",
+            "doc_path": "library/asyncio-stream.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to socket creation and async stream connection descriptions."
+    },
+    "Q168": {
+      "before": {
+        "question": "How does contextlib.closing differ from contextlib.suppress in context manager utility?",
+        "expected_answer": "contextlib.closing wraps an object with a .close() method ensuring .close() is called upon exit. contextlib.suppress(*exceptions) suppresses specified exception types raised within the context body without re-raising.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_contextlib::api_contextlib.closing::0",
+            "relevance_score": 3,
+            "evidence_text": "closing",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_contextlib::api_contextlib.suppress::0",
+            "relevance_score": 3,
+            "evidence_text": "suppress",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does contextlib.closing differ from contextlib.suppress in context manager utility?",
+        "expected_answer": "contextlib.closing wraps an object with a .close() method ensuring .close() is called upon exit. contextlib.suppress(*exceptions) suppresses specified exception types raised within the context body without re-raising.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_contextlib::api_contextlib.closing::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a context manager that closes thing upon completion of the block.",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_contextlib::api_contextlib.suppress::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a context manager that suppresses any of the specified exceptions if they occur in the body of a with statement and then resumes execution with the first statement following the end of the with statement.",
+            "doc_path": "library/contextlib.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full operational descriptions for closing and suppress context managers."
+    },
+    "Q171": {
+      "before": {
+        "question": "What is the difference between copy.copy() and copy.deepcopy() on compound objects?",
+        "expected_answer": "copy.copy(x) creates a shallow copy, constructing a new compound object and inserting references to the original child objects. copy.deepcopy(x) recursively copies all child objects found within the original.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_copy::api_copy.copy::0",
+            "relevance_score": 3,
+            "evidence_text": "shallow copy",
+            "doc_path": "library/copy.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_copy::api_copy.deepcopy::0",
+            "relevance_score": 3,
+            "evidence_text": "deep copy",
+            "doc_path": "library/copy.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the difference between copy.copy() and copy.deepcopy() on compound objects?",
+        "expected_answer": "copy.copy(x) creates a shallow copy, constructing a new compound object and inserting references to the original child objects. copy.deepcopy(x) recursively copies all child objects found within the original.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_copy::api_copy.copy::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: copy. copy ( x )\n\nReturn a shallow copy of x.",
+            "doc_path": "library/copy.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_copy::api_copy.deepcopy::0",
+            "relevance_score": 3,
+            "evidence_text": "Signature: copy. deepcopy ( x [ , memo ] )\n\nReturn a deep copy of x.",
+            "doc_path": "library/copy.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to include signatures and copy definitions."
+    },
+    "Q172": {
+      "before": {
+        "question": "Why is frozenset suitable as a dictionary key or set element while set is not?",
+        "expected_answer": "set is mutable and therefore unhashable (lacks __hash__), preventing it from being used as a dictionary key or placed inside another set. frozenset is immutable and hashable, making it valid for keys and set membership.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functions::api_class set::0",
+            "relevance_score": 3,
+            "evidence_text": "set",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_class frozenset::0",
+            "relevance_score": 3,
+            "evidence_text": "frozenset",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "Why is frozenset suitable as a dictionary key or set element while set is not?",
+        "expected_answer": "set is mutable and therefore unhashable (lacks __hash__), preventing it from being used as a dictionary key or placed inside another set. frozenset is immutable and hashable, making it valid for keys and set membership.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functions::api_class set::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a new set object, optionally with elements taken from iterable. set is a built-in class.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_class frozenset::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a new frozenset object, optionally with elements taken from iterable. frozenset is a built-in class.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to class definitions for built-in set and frozenset."
+    },
+    "Q176": {
+      "before": {
+        "question": "What is the difference between an Iterable and an Iterator in Python?",
+        "expected_answer": "An Iterable is an object capable of returning its members one at a time by defining __iter__() or __getitem__(). An Iterator is the stateful stream object returned by iter(iterable) that implements __next__() and raises StopIteration when depleted.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_collections.abc::api_collections.abc.Iterable::0",
+            "relevance_score": 3,
+            "evidence_text": "ABC for classes that provide the __iter__() method.",
+            "doc_path": "library/collections.abc.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the difference between an Iterable and an Iterator in Python?",
+        "expected_answer": "An Iterable is an object capable of returning its members one at a time by defining __iter__() or __getitem__(). An Iterator is the stateful stream object returned by iter(iterable) that implements __next__() and raises StopIteration when depleted.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_collections.abc::api_collections.abc.Iterable::0",
+            "relevance_score": 3,
+            "evidence_text": "ABC for classes that provide the __iter__() method.",
+            "doc_path": "library/collections.abc.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_collections.abc::api_collections.abc.Iterator::0",
+            "relevance_score": 3,
+            "evidence_text": "ABC for classes that provide the __iter__() and __next__() methods.",
+            "doc_path": "library/collections.abc.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Added the counterpart Iterator chunk (score 3) so that definitions for both Iterable and Iterator are fully evidenced."
+    },
+    "Q177": {
+      "before": {
+        "question": "What is the formal distinction between a parameter and an argument in Python?",
+        "expected_answer": "A parameter is the named variable defined in the function signature header. An argument is the actual value or expression passed into the function when invoking it.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_controlflow::sec_special-parameters::0",
+            "relevance_score": 3,
+            "evidence_text": "positional-only",
+            "doc_path": "tutorial/controlflow.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the formal distinction between a parameter and an argument in Python?",
+        "expected_answer": "A parameter is the named variable defined in the function signature header. An argument is the actual value or expression passed into the function when invoking it.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_controlflow::sec_special-parameters::0",
+            "relevance_score": 3,
+            "evidence_text": "By default, arguments may be passed to a Python function either by position or explicitly by keyword. For readability and performance, it makes sense to restrict the way arguments can be passed so that a developer need only look at the function definition to determine if items are passed by position, by position or keyword, or by keyword.",
+            "doc_path": "tutorial/controlflow.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to substantive passage explaining parameter specification in function definitions and argument passing."
+    },
+    "Q180": {
+      "before": {
+        "question": "What is a data descriptor and how does its precedence differ from non-data descriptors?",
+        "expected_answer": "A data descriptor defines __set__() or __delete__() (or both). It takes precedence over instance dictionary lookup. A non-data descriptor only defines __get__() and is overridden by an entry in the instance __dict__.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_datamodel::api_object.__set__::0",
+            "relevance_score": 3,
+            "evidence_text": "data descriptor",
+            "doc_path": "reference/datamodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is a data descriptor and how does its precedence differ from non-data descriptors?",
+        "expected_answer": "A data descriptor defines __set__() or __delete__() (or both). It takes precedence over instance dictionary lookup. A non-data descriptor only defines __get__() and is overridden by an entry in the instance __dict__.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_datamodel::api_object.__set__::0",
+            "relevance_score": 3,
+            "evidence_text": "Note, adding __set__() or __delete__() changes the kind of descriptor to a “data descriptor”. See Invoking Descriptors for more details.",
+            "doc_path": "reference/datamodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to passage defining data descriptor transformation via __set__ or __delete__."
+    },
+    "Q181": {
+      "before": {
+        "question": "What is the difference between a module and a package in Python's import system?",
+        "expected_answer": "A module is a single Python file (.py) containing definitions. A package is a directory containing modules and an __init__.py file (or a namespace package spanning multiple directories) allowing dotted module navigation.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_modules::sec_the-module-search-path::0",
+            "relevance_score": 3,
+            "evidence_text": "sys.path",
+            "doc_path": "tutorial/modules.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the difference between a module and a package in Python's import system?",
+        "expected_answer": "A module is a single Python file (.py) containing definitions. A package is a directory containing modules and an __init__.py file (or a namespace package spanning multiple directories) allowing dotted module navigation.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_modules::sec_packages::0",
+            "relevance_score": 3,
+            "evidence_text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the module name A.B designates a submodule named B in a package named A.",
+            "doc_path": "tutorial/modules.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Replaced module-search-path chunk with the authoritative packages section defining package namespace structure and __init__.py role."
+    },
+    "Q184": {
+      "before": {
+        "question": "How does @classmethod differ from @staticmethod in Python class definitions?",
+        "expected_answer": "A classmethod receives the class object (cls) implicitly as its first argument, allowing access to class state and factory methods. A staticmethod receives neither the instance nor the class, behaving like a plain function scoped inside the class.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functions::api_classmethod::0",
+            "relevance_score": 3,
+            "evidence_text": "Transform a method into a class method.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How does @classmethod differ from @staticmethod in Python class definitions?",
+        "expected_answer": "A classmethod receives the class object (cls) implicitly as its first argument, allowing access to class state and factory methods. A staticmethod receives neither the instance nor the class, behaving like a plain function scoped inside the class.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functions::api_classmethod::0",
+            "relevance_score": 3,
+            "evidence_text": "Transform a method into a class method. A class method receives the class as an implicit first argument, just like an instance method receives the instance.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_staticmethod::0",
+            "relevance_score": 3,
+            "evidence_text": "Transform a method into a static method. A static method does not receive an implicit first argument.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Added the counterpart staticmethod chunk (score 3) so that both classmethod and staticmethod definitions are directly evidenced."
+    },
+    "Q185": {
+      "before": {
+        "question": "What is a closure and what are free variables in Python scope execution?",
+        "expected_answer": "A closure is an inner function that retains references to variables from its enclosing lexical scope ('free variables') even after the enclosing scope has finished executing.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_executionmodel::sec_interaction-with-dynamic-features::0",
+            "relevance_score": 3,
+            "evidence_text": "free variables",
+            "doc_path": "reference/executionmodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is a closure and what are free variables in Python scope execution?",
+        "expected_answer": "A closure is an inner function that retains references to variables from its enclosing lexical scope ('free variables') even after the enclosing scope has finished executing.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_executionmodel::sec_interaction-with-dynamic-features::0",
+            "relevance_score": 3,
+            "evidence_text": "Name resolution of free variables occurs at runtime, not at compile time.",
+            "doc_path": "reference/executionmodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full runtime resolution sentence for free variables."
+    },
+    "Q187": {
+      "before": {
+        "question": "How do str and bytes differ in Python 3 data representation?",
+        "expected_answer": "str represents text as an immutable sequence of abstract Unicode characters (code points). bytes represents raw binary data as an immutable sequence of 8-bit integers (0 <= x < 256).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functions::api_class bytes::0",
+            "relevance_score": 3,
+            "evidence_text": "immutable sequence of integers in the range 0 <= x < 256",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do str and bytes differ in Python 3 data representation?",
+        "expected_answer": "str represents text as an immutable sequence of abstract Unicode characters (code points). bytes represents raw binary data as an immutable sequence of 8-bit integers (0 <= x < 256).",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_functions::api_class bytes::0",
+            "relevance_score": 3,
+            "evidence_text": "Return a new “bytes” object which is an immutable sequence of integers in the range 0 <= x < 256.",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          },
+          {
+            "chunk_id": "library_functions::api_class str::0",
+            "relevance_score": 3,
+            "evidence_text": "class str ( object = '' )",
+            "doc_path": "library/functions.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Added the counterpart class str chunk (score 3) alongside class bytes so that text character vs raw byte sequence representations are both evidenced."
+    },
+    "Q189": {
+      "before": {
+        "question": "How do dictionary view objects differ from regular lists in Python?",
+        "expected_answer": "Dictionary view objects (dict.keys(), dict.values(), dict.items()) are dynamic windows into the dictionary's contents. If the dictionary is modified after the view is created, the view reflects those changes immediately without copying data.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_stdtypes::sec_dictionary-view-objects::0",
+            "relevance_score": 3,
+            "evidence_text": "Dictionary view objects",
+            "doc_path": "library/stdtypes.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "How do dictionary view objects differ from regular lists in Python?",
+        "expected_answer": "Dictionary view objects (dict.keys(), dict.values(), dict.items()) are dynamic windows into the dictionary's contents. If the dictionary is modified after the view is created, the view reflects those changes immediately without copying data.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "library_stdtypes::sec_dictionary-view-objects::0",
+            "relevance_score": 3,
+            "evidence_text": "The objects returned by dict.keys(), dict.values() and dict.items() are view objects. They provide a dynamic view on the dictionary’s entries, which means that when the dictionary changes, the view reflects these changes.",
+            "doc_path": "library/stdtypes.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full passage explaining dynamic view reflection of dictionary modifications."
+    },
+    "Q192": {
+      "before": {
+        "question": "What is the difference between the global namespace and the builtins namespace?",
+        "expected_answer": "The global namespace contains variables and functions defined at the module level. The builtins namespace contains core Python built-in functions, exceptions, and types (like len, print, ValueError) searched as a fallback when names are not found globally.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_executionmodel::sec_resolution-of-names::0",
+            "relevance_score": 3,
+            "evidence_text": "global namespace",
+            "doc_path": "reference/executionmodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the difference between the global namespace and the builtins namespace?",
+        "expected_answer": "The global namespace contains variables and functions defined at the module level. The builtins namespace contains core Python built-in functions, exceptions, and types (like len, print, ValueError) searched as a fallback when names are not found globally.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_executionmodel::sec_resolution-of-names::0",
+            "relevance_score": 3,
+            "evidence_text": "Names are resolved in the top-level namespace by searching the global namespace, i.e. the namespace of the module containing the code block, and the builtins namespace, the namespace of the module builtins. The global namespace is searched first.",
+            "doc_path": "reference/executionmodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to full passage defining global and builtins namespace search order."
+    },
+    "Q194": {
+      "before": {
+        "question": "What determines whether a non-boolean Python object is considered truthy or falsy?",
+        "expected_answer": "An object's truth value is determined by __bool__(). If undefined, Python calls __len__(). Empty collections (len == 0), numeric zeros (0, 0.0), and None evaluate to falsy; non-empty containers and non-zero numbers evaluate to truthy.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_datamodel::api_object.__bool__::0",
+            "relevance_score": 3,
+            "evidence_text": "truth value testing",
+            "doc_path": "reference/datamodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What determines whether a non-boolean Python object is considered truthy or falsy?",
+        "expected_answer": "An object's truth value is determined by __bool__(). If undefined, Python calls __len__(). Empty collections (len == 0), numeric zeros (0, 0.0), and None evaluate to falsy; non-empty containers and non-zero numbers evaluate to truthy.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_datamodel::api_object.__bool__::0",
+            "relevance_score": 3,
+            "evidence_text": "Called to implement truth value testing and the built-in operation bool(); should return False or True. When this method is not defined, __len__() is called, if it is defined, and the object is considered true if its result is nonzero.",
+            "doc_path": "reference/datamodel.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to __bool__ and __len__ fallback logic."
+    },
+    "Q198": {
+      "before": {
+        "question": "What is the purpose of the nonlocal statement in nested Python functions?",
+        "expected_answer": "The nonlocal statement causes listed identifiers to refer to previously bound variables in the nearest enclosing function scope (excluding globals), allowing nested closures to rebind enclosing variables.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_simple_stmts::sec_the-nonlocal-statement::0",
+            "relevance_score": 3,
+            "evidence_text": "nonlocal",
+            "doc_path": "reference/simple_stmts.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "What is the purpose of the nonlocal statement in nested Python functions?",
+        "expected_answer": "The nonlocal statement causes listed identifiers to refer to previously bound variables in the nearest enclosing function scope (excluding globals), allowing nested closures to rebind enclosing variables.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "reference_simple_stmts::sec_the-nonlocal-statement::0",
+            "relevance_score": 3,
+            "evidence_text": "The nonlocal statement causes the listed identifiers to refer to names previously bound in nonlocal scopes. It allows encapsulated code to rebind such nonlocal identifiers.",
+            "doc_path": "reference/simple_stmts.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to definition of nonlocal identifier rebinding."
+    },
+    "Q200": {
+      "before": {
+        "question": "Why does using a mutable default argument like def f(x=[]) cause shared state across calls?",
+        "expected_answer": "In Python, default parameter expressions are evaluated once when the function definition is executed, not each time the function is called. Mutating a default argument modifies the shared object across all subsequent calls.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_controlflow::sec_default-argument-values::0",
+            "relevance_score": 3,
+            "evidence_text": "default value is evaluated only once",
+            "doc_path": "tutorial/controlflow.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "after": {
+        "question": "Why does using a mutable default argument like def f(x=[]) cause shared state across calls?",
+        "expected_answer": "In Python, default parameter expressions are evaluated once when the function definition is executed, not each time the function is called. Mutating a default argument modifies the shared object across all subsequent calls.",
+        "relevant_chunks": [
+          {
+            "chunk_id": "tutorial_controlflow::sec_default-argument-values::0",
+            "relevance_score": 3,
+            "evidence_text": "Important warning: The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes.",
+            "doc_path": "tutorial/controlflow.html",
+            "python_version": "3.12"
+          }
+        ]
+      },
+      "reason": "Evidence expanded to complete warning on default argument single evaluation."
+    }
+  }
+}

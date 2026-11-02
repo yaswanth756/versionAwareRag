@@ -1,0 +1,1139 @@
+{
+  "benchmark_metadata": {
+    "model_type": "sparse_lexical",
+    "retriever": "BM25Okapi",
+    "k1": 1.5,
+    "b": 0.75,
+    "tokenization": "code_and_text_aware (dotted expressions, snake_case subwords, alphanumeric)",
+    "corpus_chunks_count": 9800,
+    "benchmark_dataset": "dev.reviewed.jsonl (frozen v1.0.0)",
+    "total_queries_evaluated": 140,
+    "evaluation_duration_seconds": 2.85,
+    "queries_per_second": 49.1
+  },
+  "overall_metrics": {
+    "mrr": 0.5533,
+    "map_at_20": 0.5395,
+    "hit@1": 0.4286,
+    "recall@1": 0.4071,
+    "precision@1": 0.4286,
+    "hit@3": 0.6429,
+    "recall@3": 0.6214,
+    "precision@3": 0.2238,
+    "hit@5": 0.6857,
+    "recall@5": 0.6607,
+    "precision@5": 0.1443,
+    "ndcg@5": 0.5588,
+    "hit@10": 0.7929,
+    "recall@10": 0.7536,
+    "precision@10": 0.0836,
+    "ndcg@10": 0.5917,
+    "hit@20": 0.8357,
+    "recall@20": 0.8107,
+    "precision@20": 0.0457,
+    "ndcg@20": 0.6074,
+    "doc_hit@1": 0.6286,
+    "doc_hit@5": 0.8786,
+    "doc_hit@10": 0.9286
+  },
+  "category_metrics": {
+    "ambiguous_terminology": {
+      "query_count": 18,
+      "metrics": {
+        "mrr": 0.25,
+        "map_at_20": 0.25,
+        "hit@1": 0.1667,
+        "recall@1": 0.1389,
+        "precision@1": 0.1667,
+        "hit@3": 0.3333,
+        "recall@3": 0.3333,
+        "precision@3": 0.1296,
+        "hit@5": 0.3333,
+        "recall@5": 0.3333,
+        "precision@5": 0.0778,
+        "ndcg@5": 0.2645,
+        "hit@10": 0.3889,
+        "recall@10": 0.3889,
+        "precision@10": 0.0444,
+        "ndcg@10": 0.2843,
+        "hit@20": 0.3889,
+        "recall@20": 0.3889,
+        "precision@20": 0.0222,
+        "ndcg@20": 0.2843,
+        "doc_hit@1": 0.3333,
+        "doc_hit@5": 0.6111,
+        "doc_hit@10": 0.6111
+      }
+    },
+    "code_example": {
+      "query_count": 21,
+      "metrics": {
+        "mrr": 0.6385,
+        "map_at_20": 0.6385,
+        "hit@1": 0.5238,
+        "recall@1": 0.5238,
+        "precision@1": 0.5238,
+        "hit@3": 0.7143,
+        "recall@3": 0.7143,
+        "precision@3": 0.2381,
+        "hit@5": 0.7143,
+        "recall@5": 0.7143,
+        "precision@5": 0.1429,
+        "ndcg@5": 0.6378,
+        "hit@10": 0.9048,
+        "recall@10": 0.9048,
+        "precision@10": 0.0905,
+        "ndcg@10": 0.7013,
+        "hit@20": 0.9048,
+        "recall@20": 0.9048,
+        "precision@20": 0.0452,
+        "ndcg@20": 0.7013,
+        "doc_hit@1": 0.8571,
+        "doc_hit@5": 0.9524,
+        "doc_hit@10": 0.9524
+      }
+    },
+    "conceptual": {
+      "query_count": 21,
+      "metrics": {
+        "mrr": 0.514,
+        "map_at_20": 0.514,
+        "hit@1": 0.381,
+        "recall@1": 0.381,
+        "precision@1": 0.381,
+        "hit@3": 0.5714,
+        "recall@3": 0.5714,
+        "precision@3": 0.1905,
+        "hit@5": 0.6667,
+        "recall@5": 0.6667,
+        "precision@5": 0.1333,
+        "ndcg@5": 0.5338,
+        "hit@10": 0.7619,
+        "recall@10": 0.7619,
+        "precision@10": 0.0762,
+        "ndcg@10": 0.5626,
+        "hit@20": 0.9524,
+        "recall@20": 0.9524,
+        "precision@20": 0.0476,
+        "ndcg@20": 0.6113,
+        "doc_hit@1": 0.4762,
+        "doc_hit@5": 0.9048,
+        "doc_hit@10": 1.0
+      }
+    },
+    "exact_api_lookup": {
+      "query_count": 21,
+      "metrics": {
+        "mrr": 0.8889,
+        "map_at_20": 0.8889,
+        "hit@1": 0.8095,
+        "recall@1": 0.8095,
+        "precision@1": 0.8095,
+        "hit@3": 0.9524,
+        "recall@3": 0.9524,
+        "precision@3": 0.3175,
+        "hit@5": 0.9524,
+        "recall@5": 0.9524,
+        "precision@5": 0.1905,
+        "ndcg@5": 0.8997,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.9166,
+        "hit@20": 1.0,
+        "recall@20": 1.0,
+        "precision@20": 0.05,
+        "ndcg@20": 0.9166,
+        "doc_hit@1": 0.9048,
+        "doc_hit@5": 1.0,
+        "doc_hit@10": 1.0
+      }
+    },
+    "multi_document": {
+      "query_count": 20,
+      "metrics": {
+        "mrr": 0.3654,
+        "map_at_20": 0.2825,
+        "hit@1": 0.25,
+        "recall@1": 0.125,
+        "precision@1": 0.25,
+        "hit@3": 0.4,
+        "recall@3": 0.275,
+        "precision@3": 0.1833,
+        "hit@5": 0.45,
+        "recall@5": 0.325,
+        "precision@5": 0.13,
+        "ndcg@5": 0.285,
+        "hit@10": 0.7,
+        "recall@10": 0.475,
+        "precision@10": 0.095,
+        "ndcg@10": 0.3495,
+        "hit@20": 0.75,
+        "recall@20": 0.6,
+        "precision@20": 0.06,
+        "ndcg@20": 0.3887,
+        "doc_hit@1": 0.55,
+        "doc_hit@5": 0.85,
+        "doc_hit@10": 1.0
+      }
+    },
+    "troubleshooting": {
+      "query_count": 18,
+      "metrics": {
+        "mrr": 0.5344,
+        "map_at_20": 0.5331,
+        "hit@1": 0.3333,
+        "recall@1": 0.3333,
+        "precision@1": 0.3333,
+        "hit@3": 0.7222,
+        "recall@3": 0.7222,
+        "precision@3": 0.2407,
+        "hit@5": 0.8333,
+        "recall@5": 0.8056,
+        "precision@5": 0.1667,
+        "ndcg@5": 0.5988,
+        "hit@10": 0.8333,
+        "recall@10": 0.8056,
+        "precision@10": 0.0833,
+        "ndcg@10": 0.5988,
+        "hit@20": 0.8889,
+        "recall@20": 0.8889,
+        "precision@20": 0.0472,
+        "ndcg@20": 0.6206,
+        "doc_hit@1": 0.5556,
+        "doc_hit@5": 0.8889,
+        "doc_hit@10": 0.8889
+      }
+    },
+    "version_specific": {
+      "query_count": 21,
+      "metrics": {
+        "mrr": 0.6266,
+        "map_at_20": 0.6147,
+        "hit@1": 0.4762,
+        "recall@1": 0.4762,
+        "precision@1": 0.4762,
+        "hit@3": 0.7619,
+        "recall@3": 0.7381,
+        "precision@3": 0.254,
+        "hit@5": 0.8095,
+        "recall@5": 0.7857,
+        "precision@5": 0.1619,
+        "ndcg@5": 0.6425,
+        "hit@10": 0.9048,
+        "recall@10": 0.881,
+        "precision@10": 0.0905,
+        "ndcg@10": 0.6745,
+        "hit@20": 0.9048,
+        "recall@20": 0.881,
+        "precision@20": 0.0452,
+        "ndcg@20": 0.6745,
+        "doc_hit@1": 0.6667,
+        "doc_hit@5": 0.9048,
+        "doc_hit@10": 1.0
+      }
+    }
+  },
+  "zero_hit_at_10_count": 29,
+  "zero_hit_at_10_queries": [
+    {
+      "query_id": "Q031",
+      "category": "conceptual",
+      "mrr": 0.07692307692307693,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "howto_descriptor::sec_definition-and-introduction::0",
+          "score": 48.0524,
+          "is_hit": false,
+          "doc_path": "howto/descriptor.html",
+          "preview": "[Document: Descriptor Guide | Python Version: 3.12] [Path: Descriptor Guide > Technical Tutorial > Definition and introduction]  Definition and introduction In general, a descripto"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_datamodel::sec_invoking-descriptors::0",
+          "score": 44.2302,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > 3.Data model > 3.3.Special method names > 3.3.2.Customizing attribute access > 3.3.2.3.Invoking Descriptors]"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "howto_descriptor::sec_overview-of-descriptor-invocation::0",
+          "score": 44.1977,
+          "is_hit": false,
+          "doc_path": "howto/descriptor.html",
+          "preview": "[Document: Descriptor Guide | Python Version: 3.12] [Path: Descriptor Guide > Technical Tutorial > Overview of descriptor invocation]  Overview of descriptor invocation A descripto"
+        }
+      ]
+    },
+    {
+      "query_id": "Q039",
+      "category": "conceptual",
+      "mrr": 0.05555555555555555,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_dis::api_dis.hasfree::0",
+          "score": 26.3262,
+          "is_hit": false,
+          "doc_path": "library/dis.html",
+          "preview": "[Document: dis | Python Version: 3.12] [Path: dis > dis.hasfree] Signature: dis. hasfree  Sequence of bytecodes that access a free variable. ‘free’ in this context refers to names"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_executionmodel::sec_resolution-of-names::1",
+          "score": 23.0752,
+          "is_hit": false,
+          "doc_path": "reference/executionmodel.html",
+          "preview": "[Document: 4. Execution model | Python Version: 3.12] [Path: 4. Execution model > 4.Execution model > 4.2.Naming and binding > 4.2.2.Resolution of names]  SyntaxError is raised at"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "reference_simple_stmts::sec_the-nonlocal-statement::0",
+          "score": 21.1322,
+          "is_hit": false,
+          "doc_path": "reference/simple_stmts.html",
+          "preview": "[Document: 7. Simple statements | Python Version: 3.12] [Path: 7. Simple statements > 7.Simple statements > 7.13.Thenonlocalstatement]  7.13. The nonlocal statement When the defini"
+        }
+      ]
+    },
+    {
+      "query_id": "Q045",
+      "category": "conceptual",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "reference_datamodel::sec_objects-values-and-types::0",
+          "score": 28.712,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > 3.Data model > 3.1.Objects, values and types]  3.1. Objects, values and types Objects are Python’s abstracti"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_optparse::sec_cleanup::0",
+          "score": 26.3438,
+          "is_hit": false,
+          "doc_path": "library/optparse.html",
+          "preview": "[Document: optparse | Python Version: 3.12] [Path: optparse > optparse— Parser for command line options > Reference Guide > Cleanup]  Cleanup OptionParser instances have several cy"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "tutorial_stdlib2::sec_weak-references::0",
+          "score": 25.1223,
+          "is_hit": false,
+          "doc_path": "tutorial/stdlib2.html",
+          "preview": "[Document: 11. Brief Tour of the Standard Library | Python Version: 3.12] [Path: 11. Brief Tour of the Standard Library > 11.Brief Tour of the Standard Library — Part II > 11.6.Wea"
+        }
+      ]
+    },
+    {
+      "query_id": "Q054",
+      "category": "conceptual",
+      "mrr": 0.0625,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_importlib::sec_setting-up-an-importer::0",
+          "score": 50.4626,
+          "is_hit": false,
+          "doc_path": "library/importlib.html",
+          "preview": "[Document: importlib | Python Version: 3.12] [Path: importlib > importlib— The implementation ofimport > Examples > Setting up an importer]  Setting up an importer For deep customi"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_sys::api_sys.meta_path::0",
+          "score": 47.3768,
+          "is_hit": false,
+          "doc_path": "library/sys.html",
+          "preview": "[Document: sys | Python Version: 3.12] [Path: sys > sys.meta_path] [Version Directives: CHANGED 3.4, CHANGED 3.12] Signature: sys. meta_path  A list of meta path finder objects tha"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "reference_import::sec_the-meta-path::1",
+          "score": 44.4669,
+          "is_hit": false,
+          "doc_path": "reference/import.html",
+          "preview": "[Document: 5. The import system | Python Version: 3.12] [Path: 5. The import system > 5.The import system > 5.3.Searching > 5.3.4.The meta path] [Version Directives: CHANGED 3.4, C"
+        }
+      ]
+    },
+    {
+      "query_id": "Q059",
+      "category": "conceptual",
+      "mrr": 0.09090909090909091,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "reference_import::sec_regular-packages::0",
+          "score": 51.6151,
+          "is_hit": false,
+          "doc_path": "reference/import.html",
+          "preview": "[Document: 5. The import system | Python Version: 3.12] [Path: 5. The import system > 5.The import system > 5.2.Packages > 5.2.1.Regular packages]  5.2.1. Regular packages Python d"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_unittest::sec_test-discovery::1",
+          "score": 42.5469,
+          "is_hit": false,
+          "doc_path": "library/unittest.html",
+          "preview": "[Document: unittest | Python Version: 3.12] [Path: unittest > unittest— Unit testing framework > Test Discovery] [Version Directives: ADDED 3.2, CHANGED 3.4, CHANGED 3.11]  Changed"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "reference_import::sec_package-relative-imports::0",
+          "score": 38.8062,
+          "is_hit": false,
+          "doc_path": "reference/import.html",
+          "preview": "[Document: 5. The import system | Python Version: 3.12] [Path: 5. The import system > 5.The import system > 5.7.Package Relative Imports]  5.7. Package Relative Imports Relative im"
+        }
+      ]
+    },
+    {
+      "query_id": "Q065",
+      "category": "code_example",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_argparse::sec_epilog::0",
+          "score": 34.9125,
+          "is_hit": false,
+          "doc_path": "library/argparse.html",
+          "preview": "[Document: argparse | Python Version: 3.12] [Path: argparse > argparse— Parser for command-line options, arguments and subcommands > ArgumentParser objects > epilog]  epilog Some p"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_argparse::sec_module-argparse::0",
+          "score": 34.4843,
+          "is_hit": false,
+          "doc_path": "library/argparse.html",
+          "preview": "[Document: argparse | Python Version: 3.12] [Path: argparse > argparse— Parser for command-line options, arguments and subcommands] [Version Directives: ADDED 3.2]  argparse — Pars"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_argparse::sec_formatter-class::0",
+          "score": 32.9438,
+          "is_hit": false,
+          "doc_path": "library/argparse.html",
+          "preview": "[Document: argparse | Python Version: 3.12] [Path: argparse > argparse— Parser for command-line options, arguments and subcommands > ArgumentParser objects > formatter_class]  form"
+        }
+      ]
+    },
+    {
+      "query_id": "Q070",
+      "category": "code_example",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "tutorial_classes::sec_odds-and-ends::0",
+          "score": 25.7943,
+          "is_hit": false,
+          "doc_path": "tutorial/classes.html",
+          "preview": "[Document: 9. Classes | Python Version: 3.12] [Path: 9. Classes > 9.Classes > 9.7.Odds and Ends]  9.7. Odds and Ends Sometimes it is useful to have a data type similar to the Pasca"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_datamodel::sec_emulating-generic-types::0",
+          "score": 24.2131,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > 3.Data model > 3.3.Special method names > 3.3.5.Emulating generic types]  3.3.5. Emulating generic types Whe"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "howto_annotations::sec_accessing-the-annotations-dict-of-an-object-in-python-3-9-and-older::0",
+          "score": 23.2474,
+          "is_hit": false,
+          "doc_path": "howto/annotations.html",
+          "preview": "[Document: Annotations Best Practices | Python Version: 3.12] [Path: Annotations Best Practices > Accessing The Annotations Dict Of An Object In Python 3.9 And Older]  Accessing Th"
+        }
+      ]
+    },
+    {
+      "query_id": "Q093",
+      "category": "version_specific",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "whatsnew_3.12::sec_pathlib::0",
+          "score": 48.0396,
+          "is_hit": false,
+          "doc_path": "whatsnew/3.12.html",
+          "preview": "[Document: What’s New In Python 3.12 | Python Version: 3.12] [Path: What’s New In Python 3.12 > Improved Modules > pathlib]  pathlib Add support for subclassing pathlib.PurePath an"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "whatsnew_3.12::sec_tarfile::0",
+          "score": 39.3651,
+          "is_hit": false,
+          "doc_path": "whatsnew/3.12.html",
+          "preview": "[Document: What’s New In Python 3.12 | Python Version: 3.12] [Path: What’s New In Python 3.12 > Notable changes in 3.12.10 > tarfile]  tarfile data_filter() now normalizes symbolic"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_pathlib::api_pathlib.Path.exists::0",
+          "score": 38.9625,
+          "is_hit": false,
+          "doc_path": "library/pathlib.html",
+          "preview": "[Document: pathlib | Python Version: 3.12] [Path: pathlib > pathlib.Path.exists] [Version Directives: CHANGED 3.12] Signature: Path. exists ( * , follow_symlinks = True )  Return T"
+        }
+      ]
+    },
+    {
+      "query_id": "Q094",
+      "category": "version_specific",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_itertools::api_itertools.pairwise::0",
+          "score": 33.2957,
+          "is_hit": false,
+          "doc_path": "library/itertools.html",
+          "preview": "[Document: itertools | Python Version: 3.12] [Path: itertools > itertools.pairwise] [Version Directives: ADDED 3.10] Signature: itertools. pairwise ( iterable )  Return successive"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "whatsnew_3.12::sec_itertools::0",
+          "score": 33.159,
+          "is_hit": false,
+          "doc_path": "whatsnew/3.12.html",
+          "preview": "[Document: What’s New In Python 3.12 | Python Version: 3.12] [Path: What’s New In Python 3.12 > Improved Modules > itertools]  itertools Add itertools.batched() for collecting into"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_itertools::api_itertools.dropwhile::0",
+          "score": 32.1879,
+          "is_hit": false,
+          "doc_path": "library/itertools.html",
+          "preview": "[Document: itertools | Python Version: 3.12] [Path: itertools > itertools.dropwhile] Signature: itertools. dropwhile ( predicate , iterable )  Make an iterator that drops elements"
+        }
+      ]
+    },
+    {
+      "query_id": "Q133",
+      "category": "troubleshooting",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_stdtypes::sec_bytes-objects::0",
+          "score": 19.488,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > Binary Sequence Types —bytes,bytearray,memoryview > Bytes Objects]  Bytes Objects Bytes objects are immuta"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_stdtypes::sec_bytearray-objects::0",
+          "score": 19.0012,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > Binary Sequence Types —bytes,bytearray,memoryview > Bytearray Objects]  Bytearray Objects bytearray object"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "reference_expressions::sec_expression-lists::0",
+          "score": 17.9246,
+          "is_hit": false,
+          "doc_path": "reference/expressions.html",
+          "preview": "[Document: 6. Expressions | Python Version: 3.12] [Path: 6. Expressions > 6.Expressions > 6.15.Expression lists] [Version Directives: ADDED 3.5, ADDED 3.11]  6.15. Expression lists"
+        }
+      ]
+    },
+    {
+      "query_id": "Q136",
+      "category": "troubleshooting",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_devmode::sec_resourcewarning-example::0",
+          "score": 26.517,
+          "is_hit": false,
+          "doc_path": "library/devmode.html",
+          "preview": "[Document: Python Development Mode | Python Version: 3.12] [Path: Python Development Mode > ResourceWarning Example]  ResourceWarning Example Example of a script counting the numbe"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_devmode::sec_bad-file-descriptor-error-example::0",
+          "score": 26.1806,
+          "is_hit": false,
+          "doc_path": "library/devmode.html",
+          "preview": "[Document: Python Development Mode | Python Version: 3.12] [Path: Python Development Mode > Bad file descriptor error example]  Bad file descriptor error example Script displaying"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_tkinter::sec_how-do-i-what-option-does::0",
+          "score": 26.0187,
+          "is_hit": false,
+          "doc_path": "library/tkinter.html",
+          "preview": "[Document: tkinter | Python Version: 3.12] [Path: tkinter > tkinter— Python interface to Tcl/Tk > Tkinter Life Preserver > How do I…? What option does…?]  How do I…? What option do"
+        }
+      ]
+    },
+    {
+      "query_id": "Q141",
+      "category": "troubleshooting",
+      "mrr": 0.05263157894736842,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_csv::sec_examples::0",
+          "score": 32.5331,
+          "is_hit": false,
+          "doc_path": "library/csv.html",
+          "preview": "[Document: csv | Python Version: 3.12] [Path: csv > csv— CSV File Reading and Writing > Examples]  Examples The simplest example of reading a CSV file: Reading a file with an alter"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_lzma::api_lzma.open::0",
+          "score": 28.4984,
+          "is_hit": false,
+          "doc_path": "library/lzma.html",
+          "preview": "[Document: lzma | Python Version: 3.12] [Path: lzma > lzma.open] [Version Directives: CHANGED 3.4, CHANGED 3.6] Signature: lzma. open ( filename , mode = 'rb' , * , format = None ,"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_io::api_io.StringIO::0",
+          "score": 27.4002,
+          "is_hit": false,
+          "doc_path": "library/io.html",
+          "preview": "[Document: io | Python Version: 3.12] [Path: io > io.StringIO] Signature: class io. StringIO ( initial_value = '' , newline = '\\n' )  A text stream using an in-memory text buffer."
+        }
+      ]
+    },
+    {
+      "query_id": "Q149",
+      "category": "multi_document",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_asyncio-dev::sec_running-blocking-code::0",
+          "score": 31.8499,
+          "is_hit": false,
+          "doc_path": "library/asyncio-dev.html",
+          "preview": "[Document: Developing with asyncio | Python Version: 3.12] [Path: Developing with asyncio > Running Blocking Code]  Running Blocking Code Blocking (CPU-bound) code should not be ca"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_asyncio-sync::sec_synchronization-primitives::0",
+          "score": 31.4062,
+          "is_hit": false,
+          "doc_path": "library/asyncio-sync.html",
+          "preview": "[Document: Synchronization Primitives | Python Version: 3.12] [Path: Synchronization Primitives]  Synchronization Primitives Source code: Lib/asyncio/locks.py asyncio synchronizati"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_concurrent.futures::api_concurrent.futures.ThreadPoolExecutor::0",
+          "score": 27.7699,
+          "is_hit": false,
+          "doc_path": "library/concurrent.futures.html",
+          "preview": "[Document: concurrent.futures | Python Version: 3.12] [Path: concurrent.futures > concurrent.futures.ThreadPoolExecutor] [Version Directives: CHANGED 3.5, CHANGED 3.6, CHANGED 3.7,"
+        }
+      ]
+    },
+    {
+      "query_id": "Q150",
+      "category": "multi_document",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_pickle::sec_comparison-with-json::0",
+          "score": 42.6365,
+          "is_hit": false,
+          "doc_path": "library/pickle.html",
+          "preview": "[Document: pickle | Python Version: 3.12] [Path: pickle > pickle— Python object serialization > Relationship to other Python modules > Comparison withjson]  Comparison with json Th"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_pickle::sec_module-pickle::0",
+          "score": 37.3002,
+          "is_hit": false,
+          "doc_path": "library/pickle.html",
+          "preview": "[Document: pickle | Python Version: 3.12] [Path: pickle > pickle— Python object serialization]  pickle — Python object serialization Source code: Lib/pickle.py The pickle module im"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "tutorial_inputoutput::sec_saving-structured-data-with-json::0",
+          "score": 34.5498,
+          "is_hit": false,
+          "doc_path": "tutorial/inputoutput.html",
+          "preview": "[Document: 7. Input and Output | Python Version: 3.12] [Path: 7. Input and Output > 7.Input and Output > 7.2.Reading and Writing Files > 7.2.2.Saving structured data withjson]  7.2"
+        }
+      ]
+    },
+    {
+      "query_id": "Q154",
+      "category": "multi_document",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "reference_expressions::sec_value-comparisons::0",
+          "score": 41.7621,
+          "is_hit": false,
+          "doc_path": "reference/expressions.html",
+          "preview": "[Document: 6. Expressions | Python Version: 3.12] [Path: 6. Expressions > 6.Expressions > 6.10.Comparisons > 6.10.1.Value comparisons]  6.10.1. Value comparisons The operators <, >"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_datamodel::api_object.__lt__::0",
+          "score": 36.0981,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > object.__lt__] Signature: object. __lt__ ( self , other )  These are the so-called “rich comparison” methods"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_unittest.mock-examples::sec_more-complex-argument-matching::0",
+          "score": 32.7844,
+          "is_hit": false,
+          "doc_path": "library/unittest.mock-examples.html",
+          "preview": "[Document: unittest.mock | Python Version: 3.12] [Path: unittest.mock > unittest.mock— getting started > Further Examples > More complex argument matching]  More complex argument m"
+        }
+      ]
+    },
+    {
+      "query_id": "Q157",
+      "category": "multi_document",
+      "mrr": 0.0625,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "howto_urllib2::sec_sockets-and-layers::0",
+          "score": 48.9149,
+          "is_hit": false,
+          "doc_path": "howto/urllib2.html",
+          "preview": "[Document: HOWTO Fetch Internet Resources Using The urllib Package | Python Version: 3.12] [Path: HOWTO Fetch Internet Resources Using The urllib Package > Sockets and Layers]  Soc"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_http.client::sec_module-http.client::0",
+          "score": 48.8928,
+          "is_hit": false,
+          "doc_path": "library/http.client.html",
+          "preview": "[Document: http.client | Python Version: 3.12] [Path: http.client > http.client— HTTP protocol client]  http.client — HTTP protocol client Source code: Lib/http/client.py This modu"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_urllib.request::sec_module-urllib.request::0",
+          "score": 47.0742,
+          "is_hit": false,
+          "doc_path": "library/urllib.request.html",
+          "preview": "[Document: urllib.request | Python Version: 3.12] [Path: urllib.request > urllib.request— Extensible library for opening URLs]  urllib.request — Extensible library for opening URLs"
+        }
+      ]
+    },
+    {
+      "query_id": "Q163",
+      "category": "multi_document",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "howto_logging::sec_exceptions-raised-during-logging::0",
+          "score": 29.4383,
+          "is_hit": false,
+          "doc_path": "howto/logging.html",
+          "preview": "[Document: Logging HOWTO | Python Version: 3.12] [Path: Logging HOWTO > Exceptions raised during logging]  Exceptions raised during logging The logging package is designed to swall"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "howto_logging-cookbook::sec_deploying-web-applications-using-gunicorn-and-uwsgi::0",
+          "score": 28.4064,
+          "is_hit": false,
+          "doc_path": "howto/logging-cookbook.html",
+          "preview": "[Document: Logging Cookbook | Python Version: 3.12] [Path: Logging Cookbook > Logging to a single file from multiple processes > Deploying Web applications using Gunicorn and uWSGI"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_logging.handlers::sec_queuelistener::0",
+          "score": 28.1733,
+          "is_hit": false,
+          "doc_path": "library/logging.handlers.html",
+          "preview": "[Document: logging.handlers | Python Version: 3.12] [Path: logging.handlers > logging.handlers— Logging handlers > QueueListener] [Version Directives: ADDED 3.2]  QueueListener Add"
+        }
+      ]
+    },
+    {
+      "query_id": "Q167",
+      "category": "multi_document",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "howto_sockets::sec_sockets::0",
+          "score": 35.8474,
+          "is_hit": false,
+          "doc_path": "howto/sockets.html",
+          "preview": "[Document: Socket Programming HOWTO | Python Version: 3.12] [Path: Socket Programming HOWTO > Sockets]  Sockets I’m only going to talk about INET (i.e. IPv4) sockets, but they acco"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "howto_sockets::sec_non-blocking-sockets::0",
+          "score": 33.6968,
+          "is_hit": false,
+          "doc_path": "howto/sockets.html",
+          "preview": "[Document: Socket Programming HOWTO | Python Version: 3.12] [Path: Socket Programming HOWTO > Non-blocking Sockets]  Non-blocking Sockets If you’ve understood the preceding, you al"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_asyncio-stream::sec_streams::0",
+          "score": 32.4739,
+          "is_hit": false,
+          "doc_path": "library/asyncio-stream.html",
+          "preview": "[Document: Streams | Python Version: 3.12] [Path: Streams]  Streams Source code: Lib/asyncio/streams.py Streams are high-level async/await-ready primitives to work with network con"
+        }
+      ]
+    },
+    {
+      "query_id": "Q176",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_itertools::api_itertools.starmap::0",
+          "score": 36.7097,
+          "is_hit": false,
+          "doc_path": "library/itertools.html",
+          "preview": "[Document: itertools | Python Version: 3.12] [Path: itertools > itertools.starmap] Signature: itertools. starmap ( function , iterable )  Make an iterator that computes the functio"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_stdtypes::api_set::2",
+          "score": 31.4312,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > set] Signature: class set ( [ iterable ] )  Note, the non-operator versions of the update(), intersection_"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_functions::api_filter::0",
+          "score": 31.2941,
+          "is_hit": false,
+          "doc_path": "library/functions.html",
+          "preview": "[Document: Built-in Functions | Python Version: 3.12] [Path: Built-in Functions > filter] Signature: filter ( function , iterable )  Construct an iterator from those elements of it"
+        }
+      ]
+    },
+    {
+      "query_id": "Q177",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "reference_expressions::sec_calls::1",
+          "score": 38.1206,
+          "is_hit": false,
+          "doc_path": "reference/expressions.html",
+          "preview": "[Document: 6. Expressions | Python Version: 3.12] [Path: 6. Expressions > 6.Expressions > 6.3.Primaries > 6.3.4.Calls] [Version Directives: CHANGED 3.5]  If there are more position"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "tutorial_controlflow::sec_keyword-arguments::0",
+          "score": 34.7662,
+          "is_hit": false,
+          "doc_path": "tutorial/controlflow.html",
+          "preview": "[Document: 4. More Control Flow Tools | Python Version: 3.12] [Path: 4. More Control Flow Tools > 4.More Control Flow Tools > 4.9.More on Defining Functions > 4.9.2.Keyword Argumen"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "reference_expressions::sec_calls::2",
+          "score": 33.5743,
+          "is_hit": false,
+          "doc_path": "reference/expressions.html",
+          "preview": "[Document: 6. Expressions | Python Version: 3.12] [Path: 6. Expressions > 6.Expressions > 6.3.Primaries > 6.3.4.Calls] [Version Directives: CHANGED 3.5]  If there is no match to a"
+        }
+      ]
+    },
+    {
+      "query_id": "Q180",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "howto_descriptor::sec_descriptor-protocol::0",
+          "score": 49.524,
+          "is_hit": false,
+          "doc_path": "howto/descriptor.html",
+          "preview": "[Document: Descriptor Guide | Python Version: 3.12] [Path: Descriptor Guide > Technical Tutorial > Descriptor protocol]  Descriptor protocol descr.__get__(self, obj, type=None) des"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_datamodel::sec_invoking-descriptors::1",
+          "score": 40.2904,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > 3.Data model > 3.3.Special method names > 3.3.2.Customizing attribute access > 3.3.2.3.Invoking Descriptors]"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "reference_datamodel::sec_invoking-descriptors::0",
+          "score": 39.3578,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > 3.Data model > 3.3.Special method names > 3.3.2.Customizing attribute access > 3.3.2.3.Invoking Descriptors]"
+        }
+      ]
+    },
+    {
+      "query_id": "Q181",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_importlib::api_importlib.import_module::0",
+          "score": 44.1822,
+          "is_hit": false,
+          "doc_path": "library/importlib.html",
+          "preview": "[Document: importlib | Python Version: 3.12] [Path: importlib > importlib.import_module] [Version Directives: CHANGED 3.3] Signature: importlib. import_module ( name , package = No"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_import::sec_searching::0",
+          "score": 41.4591,
+          "is_hit": false,
+          "doc_path": "reference/import.html",
+          "preview": "[Document: 5. The import system | Python Version: 3.12] [Path: 5. The import system > 5.The import system > 5.3.Searching]  5.3. Searching To begin the search, Python needs the ful"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "reference_import::sec_packages::0",
+          "score": 41.4431,
+          "is_hit": false,
+          "doc_path": "reference/import.html",
+          "preview": "[Document: 5. The import system | Python Version: 3.12] [Path: 5. The import system > 5.The import system > 5.2.Packages]  5.2. Packages Python has only one type of module object,"
+        }
+      ]
+    },
+    {
+      "query_id": "Q187",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_os::api_os.fspath::0",
+          "score": 26.6457,
+          "is_hit": false,
+          "doc_path": "library/os.html",
+          "preview": "[Document: os | Python Version: 3.12] [Path: os > os.fspath] [Version Directives: ADDED 3.6] Signature: os. fspath ( path )  Return the file system representation of the path. If s"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_datamodel::api_object.__str__::0",
+          "score": 26.2145,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > object.__str__] Signature: object. __str__ ( self )  Called by str(object), the default __format__() impleme"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_urllib.parse::sec_parsing-ascii-encoded-bytes::0",
+          "score": 25.7889,
+          "is_hit": false,
+          "doc_path": "library/urllib.parse.html",
+          "preview": "[Document: urllib.parse | Python Version: 3.12] [Path: urllib.parse > urllib.parse— Parse URLs into components > Parsing ASCII Encoded Bytes] [Version Directives: CHANGED 3.2]  Par"
+        }
+      ]
+    },
+    {
+      "query_id": "Q188",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "reference_datamodel::api_object.__hash__::1",
+          "score": 32.3386,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > object.__hash__] [Version Directives: CHANGED 3.3] Signature: object. __hash__ ( self )  If a class that doe"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "reference_datamodel::api_object.__hash__::0",
+          "score": 31.1697,
+          "is_hit": false,
+          "doc_path": "reference/datamodel.html",
+          "preview": "[Document: 3. Data model | Python Version: 3.12] [Path: 3. Data model > object.__hash__] [Version Directives: CHANGED 3.3] Signature: object. __hash__ ( self )  Called by built-in"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_stdtypes::sec_immutable-sequence-types::0",
+          "score": 30.7761,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > Sequence Types —list,tuple,range > Immutable Sequence Types]  Immutable Sequence Types The only operation"
+        }
+      ]
+    },
+    {
+      "query_id": "Q190",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "reference_simple_stmts::sec_future-statements::0",
+          "score": 43.0484,
+          "is_hit": false,
+          "doc_path": "reference/simple_stmts.html",
+          "preview": "[Document: 7. Simple statements | Python Version: 3.12] [Path: 7. Simple statements > 7.Simple statements > 7.11.Theimportstatement > 7.11.1.Future statements]  7.11.1. Future stat"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_codeop::api_codeop.compile_command::0",
+          "score": 37.7845,
+          "is_hit": false,
+          "doc_path": "library/codeop.html",
+          "preview": "[Document: codeop | Python Version: 3.12] [Path: codeop > codeop.compile_command] Signature: codeop. compile_command ( source , filename = '<input>' , symbol = 'single' )  Tries to"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_code::api_code.InteractiveInterpreter.runsource::0",
+          "score": 37.2243,
+          "is_hit": false,
+          "doc_path": "library/code.html",
+          "preview": "[Document: code | Python Version: 3.12] [Path: code > code.InteractiveInterpreter.runsource] Signature: InteractiveInterpreter. runsource ( source , filename = '<input>' , symbol ="
+        }
+      ]
+    },
+    {
+      "query_id": "Q191",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_stdtypes::sec_the-ellipsis-object::0",
+          "score": 36.395,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > Other Built-in Types > The Ellipsis Object]  The Ellipsis Object This object is commonly used by slicing ("
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_doctest::api_doctest.OutputChecker::0",
+          "score": 31.8375,
+          "is_hit": false,
+          "doc_path": "library/doctest.html",
+          "preview": "[Document: doctest | Python Version: 3.12] [Path: doctest > doctest.OutputChecker] Signature: class doctest. OutputChecker  A class used to check the whether the actual output from"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "howto_functional::sec_generators::0",
+          "score": 30.5508,
+          "is_hit": false,
+          "doc_path": "howto/functional.html",
+          "preview": "[Document: Functional Programming HOWTO | Python Version: 3.12] [Path: Functional Programming HOWTO > Generators]  Generators Generators are a special class of functions that simpl"
+        }
+      ]
+    },
+    {
+      "query_id": "Q193",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "tutorial_datastructures::sec_more-on-conditions::0",
+          "score": 46.3841,
+          "is_hit": false,
+          "doc_path": "tutorial/datastructures.html",
+          "preview": "[Document: 5. Data Structures | Python Version: 3.12] [Path: 5. Data Structures > 5.Data Structures > 5.7.More on Conditions]  5.7. More on Conditions The conditions used in while"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_stdtypes::sec_boolean-operations-and-or-not::0",
+          "score": 40.7751,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > Boolean Operations —and,or,not]  Boolean Operations — and, or, not These are the Boolean operations, order"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_stdtypes::sec_boolean-type-bool::0",
+          "score": 29.2761,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > Boolean Type -bool] [Version Directives: DEPRECATED 3.12]  Boolean Type - bool Booleans represent truth va"
+        }
+      ]
+    },
+    {
+      "query_id": "Q194",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "tutorial_datastructures::sec_more-on-conditions::0",
+          "score": 25.7529,
+          "is_hit": false,
+          "doc_path": "tutorial/datastructures.html",
+          "preview": "[Document: 5. Data Structures | Python Version: 3.12] [Path: 5. Data Structures > 5.Data Structures > 5.7.More on Conditions]  5.7. More on Conditions The conditions used in while"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_re::sec_match-objects::0",
+          "score": 23.6771,
+          "is_hit": false,
+          "doc_path": "library/re.html",
+          "preview": "[Document: re | Python Version: 3.12] [Path: re > re— Regular expression operations > Match Objects] [Version Directives: CHANGED 3.7]  Match Objects Match objects always have a bo"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_stdtypes::sec_truth-value-testing::0",
+          "score": 23.2238,
+          "is_hit": false,
+          "doc_path": "library/stdtypes.html",
+          "preview": "[Document: Built-in Types | Python Version: 3.12] [Path: Built-in Types > Truth Value Testing]  Truth Value Testing Any object can be tested for truth value, for use in an if or wh"
+        }
+      ]
+    },
+    {
+      "query_id": "Q197",
+      "category": "ambiguous_terminology",
+      "mrr": 0.0,
+      "top_retrieved": [
+        {
+          "rank": 1,
+          "chunk_id": "library_copy::sec_module-copy::0",
+          "score": 59.4116,
+          "is_hit": false,
+          "doc_path": "library/copy.html",
+          "preview": "[Document: copy | Python Version: 3.12] [Path: copy > copy— Shallow and deep copy operations]  copy — Shallow and deep copy operations Source code: Lib/copy.py Assignment statement"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "library_tarfile::api_tarfile.TarInfo.replace::0",
+          "score": 42.9403,
+          "is_hit": false,
+          "doc_path": "library/tarfile.html",
+          "preview": "[Document: tarfile | Python Version: 3.12] [Path: tarfile > tarfile.TarInfo.replace] [Version Directives: ADDED 3.12] Signature: TarInfo. replace ( name = ... , mtime = ... , mode"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "library_copy::api_copy.object.__deepcopy__::0",
+          "score": 35.6884,
+          "is_hit": false,
+          "doc_path": "library/copy.html",
+          "preview": "[Document: copy | Python Version: 3.12] [Path: copy > copy.object.__deepcopy__] Signature: object. __deepcopy__ ( self , memo )  Called to implement the deep copy operation; it is"
+        }
+      ]
+    }
+  ]
+}

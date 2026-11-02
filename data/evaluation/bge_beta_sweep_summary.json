@@ -1,0 +1,172 @@
+{
+  "experiment_name": "Stage 5B: BGE-Reranker Score Blending Experiment (Beta Sweep)",
+  "model_name": "BAAI/bge-reranker-large",
+  "dataset": "dev.reviewed.jsonl (frozen v1.0.0, 140 queries)",
+  "candidate_pool": "hybrid_dev_predictions.jsonl (top-20 chunks, 2800 pairs)",
+  "hardware_inference": "NVIDIA Tesla T4 GPU (Kaggle via Cloudflare tunnel, 222.35s total neural inference)",
+  "best_configurations": {
+    "best_by_mrr": {
+      "beta": 0.6,
+      "mrr": 0.6462,
+      "gain_vs_hybrid": 0.0278,
+      "gain_vs_beta_0.7": 0.006
+    },
+    "best_by_ndcg10": {
+      "beta": 0.6,
+      "ndcg@10": 0.6833,
+      "gain_vs_hybrid": 0.0206,
+      "gain_vs_beta_0.7": 0.0085
+    },
+    "best_by_hit1": {
+      "beta": 0.6,
+      "hit@1": 0.5286,
+      "gain_vs_hybrid": 0.0357,
+      "gain_vs_beta_0.7": 0.0143
+    },
+    "best_by_hit5": {
+      "beta": 0.8,
+      "hit@5": 0.8071
+    }
+  },
+  "historical_baselines": {
+    "hybrid": {
+      "mrr": 0.6184,
+      "hit@1": 0.4929,
+      "hit@3": 0.7214,
+      "hit@5": 0.7786,
+      "hit@10": 0.8786,
+      "hit@20": 0.9214,
+      "recall@5": 0.7464,
+      "recall@10": 0.8429,
+      "map_at_20": 0.6026,
+      "ndcg@5": 0.629,
+      "ndcg@10": 0.6627
+    },
+    "minilm_blended_beta_0.7": {
+      "mrr": 0.6492,
+      "hit@1": 0.5357,
+      "hit@3": 0.7286,
+      "hit@5": 0.8214,
+      "hit@10": 0.8857,
+      "hit@20": 0.9214,
+      "recall@5": 0.7857,
+      "recall@10": 0.8536,
+      "map_at_20": 0.634,
+      "ndcg@5": 0.6658,
+      "ndcg@10": 0.6897
+    },
+    "bge_blended_beta_0.7_prior": {
+      "mrr": 0.6402,
+      "hit@1": 0.5143,
+      "hit@3": 0.7286,
+      "hit@5": 0.8,
+      "hit@10": 0.8571,
+      "hit@20": 0.9214,
+      "recall@5": 0.7714,
+      "recall@10": 0.825,
+      "map_at_20": 0.6268,
+      "ndcg@5": 0.6558,
+      "ndcg@10": 0.6748
+    }
+  },
+  "beta_comparison_table": [
+    {
+      "beta": 0.0,
+      "hit@1": 0.4929,
+      "hit@3": 0.7214,
+      "hit@5": 0.7786,
+      "hit@10": 0.8786,
+      "hit@20": 0.9214,
+      "recall@5": 0.7464,
+      "recall@10": 0.8429,
+      "mrr": 0.6184,
+      "map_at_20": 0.6026,
+      "ndcg@5": 0.629,
+      "ndcg@10": 0.6627
+    },
+    {
+      "beta": 0.5,
+      "hit@1": 0.5143,
+      "hit@3": 0.7286,
+      "hit@5": 0.8,
+      "hit@10": 0.8714,
+      "hit@20": 0.9214,
+      "recall@5": 0.7714,
+      "recall@10": 0.8393,
+      "mrr": 0.6381,
+      "map_at_20": 0.6253,
+      "ndcg@5": 0.6538,
+      "ndcg@10": 0.6783
+    },
+    {
+      "beta": 0.6,
+      "hit@1": 0.5286,
+      "hit@3": 0.7357,
+      "hit@5": 0.8,
+      "hit@10": 0.8714,
+      "hit@20": 0.9214,
+      "recall@5": 0.7714,
+      "recall@10": 0.8393,
+      "mrr": 0.6462,
+      "map_at_20": 0.6334,
+      "ndcg@5": 0.6599,
+      "ndcg@10": 0.6833
+    },
+    {
+      "beta": 0.7,
+      "hit@1": 0.5143,
+      "hit@3": 0.7286,
+      "hit@5": 0.8,
+      "hit@10": 0.8571,
+      "hit@20": 0.9214,
+      "recall@5": 0.7714,
+      "recall@10": 0.825,
+      "mrr": 0.6402,
+      "map_at_20": 0.6268,
+      "ndcg@5": 0.6558,
+      "ndcg@10": 0.6748
+    },
+    {
+      "beta": 0.8,
+      "hit@1": 0.5,
+      "hit@3": 0.7286,
+      "hit@5": 0.8071,
+      "hit@10": 0.8571,
+      "hit@20": 0.9214,
+      "recall@5": 0.7786,
+      "recall@10": 0.825,
+      "mrr": 0.6348,
+      "map_at_20": 0.6215,
+      "ndcg@5": 0.6547,
+      "ndcg@10": 0.671
+    },
+    {
+      "beta": 0.9,
+      "hit@1": 0.4929,
+      "hit@3": 0.7429,
+      "hit@5": 0.8,
+      "hit@10": 0.85,
+      "hit@20": 0.9214,
+      "recall@5": 0.7679,
+      "recall@10": 0.8179,
+      "mrr": 0.6294,
+      "map_at_20": 0.6159,
+      "ndcg@5": 0.6466,
+      "ndcg@10": 0.6649
+    },
+    {
+      "beta": 1.0,
+      "hit@1": 0.4643,
+      "hit@3": 0.7286,
+      "hit@5": 0.8,
+      "hit@10": 0.8643,
+      "hit@20": 0.9214,
+      "recall@5": 0.7679,
+      "recall@10": 0.8321,
+      "mrr": 0.605,
+      "map_at_20": 0.5927,
+      "ndcg@5": 0.63,
+      "ndcg@10": 0.6529
+    }
+  ]
+}

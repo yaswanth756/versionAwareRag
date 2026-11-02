@@ -1,0 +1,24 @@
+{
+  "status": "PASSED",
+  "checks": {
+    "valid_jsonl_syntax": true,
+    "unique_query_ids": true,
+    "unique_questions": true,
+    "all_referenced_chunks_exist": true,
+    "all_evidence_substrings_exist": true,
+    "relevance_scores_valid": true,
+    "python_versions_valid": true,
+    "no_empty_questions": true,
+    "no_empty_evidence": true,
+    "no_empty_answers": true,
+    "split_disjointness_verified": true,
+    "category_coverage_verified": true
+  },
+  "statistics": {
+    "total_questions_validated": 200,
+    "total_evidence_passages_validated": 228,
+    "dev_set_size": 140,
+    "test_set_size": 60,
+    "failed_checks_count": 0
+  }
+}

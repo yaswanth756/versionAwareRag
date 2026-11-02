@@ -1,0 +1,53 @@
+{
+  "dataset_name": "python-3.12-rag-eval",
+  "description": "Grounded evaluation dataset for retrieval-augmented generation on Python 3.12 documentation corpus",
+  "python_version": "3.12",
+  "random_seed": 42,
+  "total_questions": 200,
+  "total_unique_referenced_chunks": 202,
+  "split_counts": {
+    "dev": 140,
+    "test": 60,
+    "dev_percentage": 70.0,
+    "test_percentage": 30.0
+  },
+  "category_distribution": {
+    "total": {
+      "exact_api_lookup": 30,
+      "conceptual": 30,
+      "code_example": 30,
+      "version_specific": 30,
+      "troubleshooting": 26,
+      "multi_document": 28,
+      "ambiguous_terminology": 26
+    },
+    "dev": {
+      "exact_api_lookup": 21,
+      "conceptual": 21,
+      "code_example": 21,
+      "version_specific": 21,
+      "troubleshooting": 18,
+      "multi_document": 20,
+      "ambiguous_terminology": 18
+    },
+    "test": {
+      "exact_api_lookup": 9,
+      "conceptual": 9,
+      "code_example": 9,
+      "version_specific": 9,
+      "troubleshooting": 8,
+      "multi_document": 8,
+      "ambiguous_terminology": 8
+    }
+  },
+  "relevance_score_distribution": {
+    "3": 221,
+    "2": 7
+  },
+  "verification_summary": {
+    "all_chunk_ids_verified_in_corpus": true,
+    "all_evidence_passages_verbatim_verified": true,
+    "total_needs_human_review": 0,
+    "automatic_vs_human_status": "Candidate groundings generated with exact textual verification; final gold labels require domain expert signoff"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "experiment_name": "Stage 5C: Candidate Pool Expansion Experiment",
+  "model_name": "BAAI/bge-reranker-large",
+  "fixed_beta": 0.6,
+  "evaluated_pool_sizes": [
+    20,
+    30,
+    40,
+    50
+  ],
+  "best_configurations": {
+    "best_by_mrr": {
+      "pool_size": 30,
+      "mrr": 0.6479,
+      "gain_vs_k20": 0.0017
+    },
+    "best_by_hit1": {
+      "pool_size": 20,
+      "hit@1": 0.5286,
+      "gain_vs_k20": 0.0
+    },
+    "best_by_ndcg10": {
+      "pool_size": 20,
+      "ndcg@10": 0.6833,
+      "gain_vs_k20": 0.0
+    }
+  },
+  "comparison_table": [
+    {
+      "pool_size": 20,
+      "hit@1": 0.5286,
+      "hit@3": 0.7357,
+      "hit@5": 0.8,
+      "hit@10": 0.8714,
+      "hit@20": 0.9214,
+      "recall@5": 0.7714,
+      "recall@10": 0.8393,
+      "mrr": 0.6462,
+      "map_at_20": 0.6334,
+      "ndcg@5": 0.6599,
+      "ndcg@10": 0.6833
+    },
+    {
+      "pool_size": 30,
+      "hit@1": 0.5286,
+      "hit@3": 0.7286,
+      "hit@5": 0.8,
+      "hit@10": 0.8643,
+      "hit@20": 0.9429,
+      "hit@30": 0.9643,
+      "recall@5": 0.7714,
+      "recall@10": 0.8321,
+      "mrr": 0.6479,
+      "map_at_20": 0.6339,
+      "ndcg@5": 0.6594,
+      "ndcg@10": 0.6806
+    },
+    {
+      "pool_size": 40,
+      "hit@1": 0.5286,
+      "hit@3": 0.7286,
+      "hit@5": 0.7929,
+      "hit@10": 0.8643,
+      "hit@20": 0.95,
+      "hit@40": 0.9786,
+      "recall@5": 0.7679,
+      "recall@10": 0.8321,
+      "mrr": 0.6476,
+      "map_at_20": 0.6337,
+      "ndcg@5": 0.6577,
+      "ndcg@10": 0.6804
+    },
+    {
+      "pool_size": 50,
+      "hit@1": 0.5286,
+      "hit@3": 0.7286,
+      "hit@5": 0.7929,
+      "hit@10": 0.8643,
+      "hit@20": 0.9286,
+      "hit@50": 0.9786,
+      "recall@5": 0.7679,
+      "recall@10": 0.8321,
+      "mrr": 0.6473,
+      "map_at_20": 0.6332,
+      "ndcg@5": 0.6581,
+      "ndcg@10": 0.6808
+    }
+  ]
+}

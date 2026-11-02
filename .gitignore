@@ -1,0 +1,39 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Large raw HTML sources & archives
+data/raw/
+data/source_archives/
+*.zip
+*.tar.gz
+
+# Intermediate preprocessing stages
+data/processed/python-3.12/*before_signature_fix*
+data/processed/python-3.12/documents.jsonl
+data/processed/python-3.12/documents_enriched.jsonl
+
+# Local logs & large sweep dumps
+*.log
+bge_beta_sweep_predictions.jsonl
+*.tmp
+
+# IDE
+.idea/
+.vscode/

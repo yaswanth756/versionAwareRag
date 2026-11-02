@@ -1,0 +1,1312 @@
+{
+  "documents_audited": 535,
+  "shortest_document_characters": 79,
+  "median_document_characters": 8893,
+  "longest_document_characters": 1612327,
+  "navigation_marker_documents": [
+    {
+      "source_path": "faq/general.html",
+      "markers": [
+        "Table of Contents"
+      ]
+    },
+    {
+      "source_path": "index.html",
+      "markers": [
+        "Table of Contents"
+      ]
+    },
+    {
+      "source_path": "library/idle.html",
+      "markers": [
+        "Table of Contents"
+      ]
+    },
+    {
+      "source_path": "library/index.html",
+      "markers": [
+        "Table of Contents"
+      ]
+    },
+    {
+      "source_path": "library/intro.html",
+      "markers": [
+        "Table of Contents"
+      ]
+    },
+    {
+      "source_path": "library/tarfile.html",
+      "markers": [
+        "Table of Contents"
+      ]
+    },
+    {
+      "source_path": "library/zipfile.html",
+      "markers": [
+        "Table of Contents"
+      ]
+    }
+  ],
+  "repeated_line_documents": [
+    {
+      "source_path": "c-api/arg.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/buffer.html",
+      "examples": [
+        "Part of the Stable ABI since version 3.11."
+      ]
+    },
+    {
+      "source_path": "c-api/bytes.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/call.html",
+      "examples": [
+        "Added in version 3.9.",
+        "Part of the Stable ABI since version 3.12.",
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/capsule.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/code.html",
+      "examples": [
+        "This is Unstable API. It may change without warning in minor releases.",
+        "Added in version 3.11."
+      ]
+    },
+    {
+      "source_path": "c-api/codec.html",
+      "examples": [
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/contextvars.html",
+      "examples": [
+        "Return value: New reference."
+      ]
+    },
+    {
+      "source_path": "c-api/conversion.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/datetime.html",
+      "examples": [
+        "Return value: New reference."
+      ]
+    },
+    {
+      "source_path": "c-api/descriptor.html",
+      "examples": [
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/dict.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Return value: New reference. Part of the Stable ABI.",
+        "Added in version 3.12."
+      ]
+    },
+    {
+      "source_path": "c-api/exceptions.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Return value: Always NULL. Part of the Stable ABI.",
+        "Return value: Always NULL. Part of the Stable ABI on Windows since version 3.7."
+      ]
+    },
+    {
+      "source_path": "c-api/frame.html",
+      "examples": [
+        "Added in version 3.11.",
+        "Added in version 3.12."
+      ]
+    },
+    {
+      "source_path": "c-api/function.html",
+      "examples": [
+        "Return value: Borrowed reference.",
+        "Added in version 3.12."
+      ]
+    },
+    {
+      "source_path": "c-api/gcsupport.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/import.html",
+      "examples": [
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/init.html",
+      "examples": [
+        "This API is kept for backward compatibility: setting",
+        "Initialization Configuration.",
+        "Deprecated since version 3.12."
+      ]
+    },
+    {
+      "source_path": "c-api/init_config.html",
+      "examples": [
+        "PyStatus status;",
+        "if (PyStatus_Exception(status)) {",
+        "PyConfig_Clear(&config);"
+      ]
+    },
+    {
+      "source_path": "c-api/list.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/long.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Return value: New reference. Part of the Stable ABI.",
+        "Returns -1 on error. Use PyErr_Occurred() to disambiguate."
+      ]
+    },
+    {
+      "source_path": "c-api/mapping.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/memory.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/method.html",
+      "examples": [
+        "Return value: Borrowed reference."
+      ]
+    },
+    {
+      "source_path": "c-api/module.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Added in version 3.5.",
+        "Return -1 with an exception set on error, 0 on success."
+      ]
+    },
+    {
+      "source_path": "c-api/number.html",
+      "examples": [
+        "Return value: New reference. Part of the Stable ABI.",
+        "operation is done in-place when o1 supports it. This is the equivalent of"
+      ]
+    },
+    {
+      "source_path": "c-api/object.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "specified as a const char* UTF-8 encoded bytes string,",
+        "rather than a PyObject*."
+      ]
+    },
+    {
+      "source_path": "c-api/sequence.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/set.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/structures.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Added in version 3.9.",
+        "The function signature is:"
+      ]
+    },
+    {
+      "source_path": "c-api/sys.html",
+      "examples": [
+        "Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/tuple.html",
+      "examples": [
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/type.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Added in version 3.12."
+      ]
+    },
+    {
+      "source_path": "c-api/typeobj.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "This field is inherited by subtypes.",
+        "Added in version 3.10."
+      ]
+    },
+    {
+      "source_path": "c-api/unicode.html",
+      "examples": [
+        "Part of the Stable ABI.",
+        "Added in version 3.3.",
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "c-api/veryhigh.html",
+      "examples": [
+        "Return value: New reference.",
+        "Return value: New reference. Part of the Stable ABI."
+      ]
+    },
+    {
+      "source_path": "contents.html",
+      "examples": [
+        "Summary – Release highlights",
+        "Other Language Changes",
+        "Improved Modules"
+      ]
+    },
+    {
+      "source_path": "extending/extending.html",
+      "examples": [
+        "static PyObject *"
+      ]
+    },
+    {
+      "source_path": "extending/newtypes.html",
+      "examples": [
+        "static PyObject *"
+      ]
+    },
+    {
+      "source_path": "extending/newtypes_tutorial.html",
+      "examples": [
+        "#define PY_SSIZE_T_CLEAN",
+        "#include <Python.h>",
+        "typedef struct {"
+      ]
+    },
+    {
+      "source_path": "faq/programming.html",
+      "examples": [
+        "Traceback (most recent call last):"
+      ]
+    },
+    {
+      "source_path": "genindex-A.html",
+      "examples": [
+        "built-in function",
+        "(in module math)"
+      ]
+    },
+    {
+      "source_path": "genindex-C.html",
+      "examples": [
+        "built-in function",
+        "(decimal.Decimal method)",
+        "(class in typing)"
+      ]
+    },
+    {
+      "source_path": "genindex-G.html",
+      "examples": [
+        "(email.message.Message method)",
+        "(sunau.AU_read method)",
+        "(wave.Wave_read method)"
+      ]
+    },
+    {
+      "source_path": "genindex-H.html",
+      "examples": [
+        "built-in function"
+      ]
+    },
+    {
+      "source_path": "genindex-I.html",
+      "examples": [
+        "built-in function",
+        "(in module math)",
+        "(decimal.Decimal method)"
+      ]
+    },
+    {
+      "source_path": "genindex-L.html",
+      "examples": [
+        "(decimal.Decimal method)"
+      ]
+    },
+    {
+      "source_path": "genindex-M.html",
+      "examples": [
+        "built-in function",
+        "(class in typing)"
+      ]
+    },
+    {
+      "source_path": "genindex-N.html",
+      "examples": [
+        "(decimal.Decimal method)"
+      ]
+    },
+    {
+      "source_path": "genindex-P.html",
+      "examples": [
+        "built-in function"
+      ]
+    },
+    {
+      "source_path": "genindex-R.html",
+      "examples": [
+        "built-in function",
+        "(pathlib.Path method)"
+      ]
+    },
+    {
+      "source_path": "genindex-S.html",
+      "examples": [
+        "(socket.socket method)",
+        "built-in function",
+        "(sunau.AU_write method)"
+      ]
+    },
+    {
+      "source_path": "genindex-Symbols.html",
+      "examples": [
+        "in glob-style wildcards, [1]",
+        "in string formatting",
+        "in struct format strings"
+      ]
+    },
+    {
+      "source_path": "genindex-_.html",
+      "examples": [
+        "(object method)",
+        "(in module operator)",
+        "(function attribute), [1]"
+      ]
+    },
+    {
+      "source_path": "genindex-all.html",
+      "examples": [
+        "in glob-style wildcards, [1]",
+        "in string formatting",
+        "in struct format strings"
+      ]
+    },
+    {
+      "source_path": "howto/argparse.html",
+      "examples": [
+        "import argparse",
+        "parser = argparse.ArgumentParser()",
+        "$ python prog.py"
+      ]
+    },
+    {
+      "source_path": "howto/descriptor.html",
+      "examples": [
+        "def __get__(self, obj, objtype=None):",
+        "def __set__(self, obj, value):",
+        "raise ValueError("
+      ]
+    },
+    {
+      "source_path": "howto/enum.html",
+      "examples": [
+        ">>> class Color(Enum):",
+        "...     RED = 1",
+        "...     GREEN = 2"
+      ]
+    },
+    {
+      "source_path": "howto/gdb_helpers.html",
+      "examples": [
+        "recursive_function(n-1)",
+        "Locals for recursive_function"
+      ]
+    },
+    {
+      "source_path": "howto/ipaddress.html",
+      "examples": [
+        "Traceback (most recent call last):"
+      ]
+    },
+    {
+      "source_path": "howto/logging-cookbook.html",
+      "examples": [
+        "if __name__ == '__main__':",
+        "\"class\": \"logging.StreamHandler\",",
+        "\"formatter\": \"simple\","
+      ]
+    },
+    {
+      "source_path": "howto/perf_profiling.html",
+      "examples": [
+        "|          |          |                     _PyEval_EvalFrameDefault",
+        "|          |          |                     PyObject_Vectorcall",
+        "|          |          |                     _PyEval_Vector"
+      ]
+    },
+    {
+      "source_path": "howto/sorting.html",
+      "examples": [
+        "[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+      ]
+    },
+    {
+      "source_path": "howto/urllib2.html",
+      "examples": [
+        "import urllib.request"
+      ]
+    },
+    {
+      "source_path": "library/abc.html",
+      "examples": [
+        "@abstractmethod"
+      ]
+    },
+    {
+      "source_path": "library/argparse.html",
+      "examples": [
+        ">>> parser.print_help()",
+        "-h, --help  show this help message and exit",
+        "positional arguments:"
+      ]
+    },
+    {
+      "source_path": "library/ast.html",
+      "examples": [
+        "attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)",
+        "type_ignores=[])",
+        "Added in version 3.8."
+      ]
+    },
+    {
+      "source_path": "library/asyncio-eventloop.html",
+      "examples": [
+        "Added in version 3.7.",
+        "loop.run_forever()",
+        "Changed in version 3.11: Added the ssl_shutdown_timeout parameter."
+      ]
+    },
+    {
+      "source_path": "library/asyncio-policy.html",
+      "examples": [
+        "Deprecated since version 3.12."
+      ]
+    },
+    {
+      "source_path": "library/asyncio-protocol.html",
+      "examples": [
+        "def connection_made(self, transport):",
+        "async def main():",
+        "# Get a reference to the event loop as we plan to use"
+      ]
+    },
+    {
+      "source_path": "library/asyncio-stream.html",
+      "examples": [
+        "await writer.wait_closed()"
+      ]
+    },
+    {
+      "source_path": "library/asyncio-sync.html",
+      "examples": [
+        "Changed in version 3.10: Removed the loop parameter."
+      ]
+    },
+    {
+      "source_path": "library/asyncio-task.html",
+      "examples": [
+        "async def main():",
+        "asyncio.run(main())",
+        "Added in version 3.11."
+      ]
+    },
+    {
+      "source_path": "library/audit_events.html",
+      "examples": [
+        "self, host, port"
+      ]
+    },
+    {
+      "source_path": "library/bisect.html",
+      "examples": [
+        "raise ValueError"
+      ]
+    },
+    {
+      "source_path": "library/bz2.html",
+      "examples": [
+        "Added in version 3.3."
+      ]
+    },
+    {
+      "source_path": "library/calendar.html",
+      "examples": [
+        "Added in version 3.7."
+      ]
+    },
+    {
+      "source_path": "library/cmath.html",
+      "examples": [
+        "Added in version 3.6."
+      ]
+    },
+    {
+      "source_path": "library/cmd.html",
+      "examples": [
+        "(turtle) right 30",
+        "(turtle) right 90"
+      ]
+    },
+    {
+      "source_path": "library/collections.abc.html",
+      "examples": [
+        "Added in version 3.5."
+      ]
+    },
+    {
+      "source_path": "library/contextlib.html",
+      "examples": [
+        "with ExitStack() as stack:"
+      ]
+    },
+    {
+      "source_path": "library/ctypes.html",
+      "examples": [
+        ">>> from ctypes import *",
+        "Traceback (most recent call last):",
+        "File \"<stdin>\", line 1, in <module>"
+      ]
+    },
+    {
+      "source_path": "library/dataclasses.html",
+      "examples": [
+        "Added in version 3.10."
+      ]
+    },
+    {
+      "source_path": "library/datetime.html",
+      "examples": [
+        ">>> from datetime import timedelta",
+        "Class attributes:",
+        ">>> from datetime import date"
+      ]
+    },
+    {
+      "source_path": "library/decimal.html",
+      "examples": [
+        "Traceback (most recent call last):",
+        "File \"<stdin>\", line 1, in <module>"
+      ]
+    },
+    {
+      "source_path": "library/dis.html",
+      "examples": [
+        "Changed in version 3.11: Added the show_caches and adaptive parameters.",
+        "Added in version 3.11.",
+        "Added in version 3.12."
+      ]
+    },
+    {
+      "source_path": "library/doctest.html",
+      "examples": [
+        "Traceback (most recent call last):"
+      ]
+    },
+    {
+      "source_path": "library/email.compat32-message.html",
+      "examples": [
+        "This is a legacy method. On the",
+        "EmailMessage class its functionality is"
+      ]
+    },
+    {
+      "source_path": "library/email.headerregistry.html",
+      "examples": [
+        "UniqueAddressHeader"
+      ]
+    },
+    {
+      "source_path": "library/email.mime.html",
+      "examples": [
+        "Changed in version 3.6: Added policy keyword-only parameter.",
+        "Optional policy argument defaults to compat32.",
+        "A subclass of MIMENonMultipart, the"
+      ]
+    },
+    {
+      "source_path": "library/email.parser.html",
+      "examples": [
+        "Changed in version 3.3: Removed the strict argument. Added the policy keyword."
+      ]
+    },
+    {
+      "source_path": "library/enum.html",
+      "examples": [
+        "Added in version 3.11.",
+        "...     RED = auto()",
+        "...     GREEN = auto()"
+      ]
+    },
+    {
+      "source_path": "library/errno.html",
+      "examples": [
+        "Added in version 3.2."
+      ]
+    },
+    {
+      "source_path": "library/functools.html",
+      "examples": [
+        "...     if verbose:",
+        ">>> @fun.register"
+      ]
+    },
+    {
+      "source_path": "library/gettext.html",
+      "examples": [
+        "Added in version 3.8."
+      ]
+    },
+    {
+      "source_path": "library/hashlib.html",
+      "examples": [
+        ">>> h.hexdigest()",
+        ">>> from hashlib import blake2b"
+      ]
+    },
+    {
+      "source_path": "library/http.client.html",
+      "examples": [
+        "A subclass of HTTPException.",
+        ">>> import http.client"
+      ]
+    },
+    {
+      "source_path": "library/http.cookies.html",
+      "examples": [
+        ">>> C = cookies.SimpleCookie()"
+      ]
+    },
+    {
+      "source_path": "library/http.html",
+      "examples": [
+        "HTTP/1.1 RFC 7231, Section 6"
+      ]
+    },
+    {
+      "source_path": "library/importlib.html",
+      "examples": [
+        "Added in version 3.3.",
+        "Added in version 3.4.",
+        "is_package(fullname)"
+      ]
+    },
+    {
+      "source_path": "library/importlib.metadata.html",
+      "examples": [
+        "Raises PackageNotFoundError if the named distribution",
+        "package is not installed in the current Python environment."
+      ]
+    },
+    {
+      "source_path": "library/importlib.resources.html",
+      "examples": [
+        "package is either a name or a module object which conforms to the",
+        "Package requirements. resource is the name of the resource to open",
+        "within package; it may not contain path separators and it may not have"
+      ]
+    },
+    {
+      "source_path": "library/inspect.html",
+      "examples": [
+        "Added in version 3.5."
+      ]
+    },
+    {
+      "source_path": "library/ipaddress.html",
+      "examples": [
+        ">>> interface = IPv4Interface('192.0.2.5/24')"
+      ]
+    },
+    {
+      "source_path": "library/itertools.html",
+      "examples": [
+        "Roughly equivalent to:",
+        "iterator = iter(iterable)"
+      ]
+    },
+    {
+      "source_path": "library/json.html",
+      "examples": [
+        ">>> import json"
+      ]
+    },
+    {
+      "source_path": "library/logging.handlers.html",
+      "examples": [
+        "Added in version 3.3."
+      ]
+    },
+    {
+      "source_path": "library/logging.html",
+      "examples": [
+        "interpreted as for debug().",
+        "are otherwise the same as for debug()."
+      ]
+    },
+    {
+      "source_path": "library/mailbox.html",
+      "examples": [
+        "representation. If create is True, the mailbox is created if it does not",
+        "Note: This method has an extra parameter (from_) compared with other classes.",
+        "The first line of an mbox file entry is the Unix “From “ line."
+      ]
+    },
+    {
+      "source_path": "library/math.html",
+      "examples": [
+        "Added in version 3.8.",
+        "Added in version 3.2."
+      ]
+    },
+    {
+      "source_path": "library/multiprocessing.html",
+      "examples": [
+        "if __name__ == '__main__':",
+        "Added in version 3.3.",
+        "Added in version 3.4."
+      ]
+    },
+    {
+      "source_path": "library/multiprocessing.shared_memory.html",
+      "examples": [
+        ">>> from multiprocessing import shared_memory"
+      ]
+    },
+    {
+      "source_path": "library/nntplib.html",
+      "examples": [
+        "Added in version 3.2."
+      ]
+    },
+    {
+      "source_path": "library/optparse.html",
+      "examples": [
+        "(options, args) = parser.parse_args()"
+      ]
+    },
+    {
+      "source_path": "library/os.html",
+      "examples": [
+        "Availability: Unix, not Emscripten, not WASI.",
+        "Added in version 3.2.",
+        "Added in version 3.6."
+      ]
+    },
+    {
+      "source_path": "library/os.path.html",
+      "examples": [
+        "Changed in version 3.6: Accepts a path-like object."
+      ]
+    },
+    {
+      "source_path": "library/pathlib.html",
+      "examples": [
+        "pathsegments is specified similarly to PurePath.",
+        "Traceback (most recent call last):",
+        "File \"<stdin>\", line 1, in <module>"
+      ]
+    },
+    {
+      "source_path": "library/pdb.html",
+      "examples": [
+        "Added in version 3.2."
+      ]
+    },
+    {
+      "source_path": "library/pkgutil.html",
+      "examples": [
+        "Changed in version 3.3: Updated to be based directly on importlib rather than relying",
+        "on the package internal PEP 302 import emulation."
+      ]
+    },
+    {
+      "source_path": "library/plistlib.html",
+      "examples": [
+        "Added in version 3.4."
+      ]
+    },
+    {
+      "source_path": "library/re.html",
+      "examples": [
+        "The expression’s behaviour can be modified by specifying a flags value.",
+        "Values can be any of the flags variables, combined using bitwise OR",
+        "(the | operator)."
+      ]
+    },
+    {
+      "source_path": "library/resource.html",
+      "examples": [
+        "Added in version 3.4."
+      ]
+    },
+    {
+      "source_path": "library/select.html",
+      "examples": [
+        "Changed in version 3.5: The function is now retried with a recomputed timeout when interrupted by",
+        "a signal, except if the signal handler raises an exception (see",
+        "PEP 475 for the rationale), instead of raising"
+      ]
+    },
+    {
+      "source_path": "library/shutil.html",
+      "examples": [
+        "Changed in version 3.8: Platform-specific fast-copy syscalls may be used internally in order to",
+        "copy the file more efficiently. See",
+        "Platform-dependent efficient copy operations section."
+      ]
+    },
+    {
+      "source_path": "library/signal.html",
+      "examples": [
+        "Availability: Unix.",
+        "Added in version 3.3."
+      ]
+    },
+    {
+      "source_path": "library/socket.html",
+      "examples": [
+        "Added in version 3.3.",
+        "Added in version 3.7.",
+        "Added in version 3.9."
+      ]
+    },
+    {
+      "source_path": "library/sqlite3.html",
+      "examples": [
+        ">>> con.close()",
+        "Added in version 3.12.",
+        "Added in version 3.11."
+      ]
+    },
+    {
+      "source_path": "library/ssl.html",
+      "examples": [
+        "Added in version 3.4.",
+        "Added in version 3.3.",
+        "Added in version 3.7."
+      ]
+    },
+    {
+      "source_path": "library/stat.html",
+      "examples": [
+        "Added in version 3.4."
+      ]
+    },
+    {
+      "source_path": "library/statistics.html",
+      "examples": [
+        "Added in version 3.8."
+      ]
+    },
+    {
+      "source_path": "library/stdtypes.html",
+      "examples": [
+        "Added in version 3.3.",
+        "Added in version 3.9.",
+        "The subsequence to search for may be any bytes-like object or an"
+      ]
+    },
+    {
+      "source_path": "library/subprocess.html",
+      "examples": [
+        "Changed in version 3.12: Changed Windows shell search order for shell=True. The current",
+        "directory and %PATH% are replaced with %COMSPEC% and",
+        "%SystemRoot%\\System32\\cmd.exe. As a result, dropping a"
+      ]
+    },
+    {
+      "source_path": "library/sys.html",
+      "examples": [
+        "Added in version 3.2.",
+        "Added in version 3.3.",
+        "Added in version 3.12."
+      ]
+    },
+    {
+      "source_path": "library/sysconfig.html",
+      "examples": [
+        "Installation directory"
+      ]
+    },
+    {
+      "source_path": "library/tarfile.html",
+      "examples": [
+        "Changed in version 3.12: Can be set to None for extract() and",
+        "extractall(), causing extraction to skip applying this"
+      ]
+    },
+    {
+      "source_path": "library/test.html",
+      "examples": [
+        "Added in version 3.10."
+      ]
+    },
+    {
+      "source_path": "library/threading.html",
+      "examples": [
+        "Changed in version 3.3: changed from a factory function to a class."
+      ]
+    },
+    {
+      "source_path": "library/time.html",
+      "examples": [
+        "Added in version 3.7.",
+        "Availability: Unix.",
+        "Added in version 3.3."
+      ]
+    },
+    {
+      "source_path": "library/tkinter.ttk.html",
+      "examples": [
+        "from tkinter import ttk",
+        "This widget accepts the following specific options:"
+      ]
+    },
+    {
+      "source_path": "library/traceback.html",
+      "examples": [
+        "Added in version 3.5.",
+        "bright_side_of_life()",
+        "Traceback (most recent call last):"
+      ]
+    },
+    {
+      "source_path": "library/tracemalloc.html",
+      "examples": [
+        "import tracemalloc"
+      ]
+    },
+    {
+      "source_path": "library/turtle.html",
+      "examples": [
+        ">>> turtle.position()",
+        ">>> turtle.heading()",
+        ">>> turtle.pos()"
+      ]
+    },
+    {
+      "source_path": "library/types.html",
+      "examples": [
+        "Added in version 3.7."
+      ]
+    },
+    {
+      "source_path": "library/typing.html",
+      "examples": [
+        "Added in version 3.5.2.",
+        "from collections.abc import Iterable",
+        "Added in version 3.11."
+      ]
+    },
+    {
+      "source_path": "library/unittest.html",
+      "examples": [
+        "import unittest",
+        "----------------------------------------------------------------------",
+        "Added in version 3.2."
+      ]
+    },
+    {
+      "source_path": "library/unittest.mock-examples.html",
+      "examples": [
+        ">>> mock = Mock()",
+        "Traceback (most recent call last):",
+        ">>> class MyTest(unittest.TestCase):"
+      ]
+    },
+    {
+      "source_path": "library/unittest.mock.html",
+      "examples": [
+        "Traceback (most recent call last):",
+        ">>> mock = MagicMock()",
+        ">>> mock = Mock()"
+      ]
+    },
+    {
+      "source_path": "library/urllib.request.html",
+      "examples": [
+        "This method is not defined in BaseHandler, but subclasses should",
+        ">>> import urllib.request"
+      ]
+    },
+    {
+      "source_path": "library/winreg.html",
+      "examples": [
+        "Changed in version 3.3: See above.",
+        "key is an already open key, or one of the predefined",
+        "HKEY_* constants."
+      ]
+    },
+    {
+      "source_path": "library/wsgiref.html",
+      "examples": [
+        "httpd.serve_forever()"
+      ]
+    },
+    {
+      "source_path": "library/xml.etree.elementtree.html",
+      "examples": [
+        "<?xml version=\"1.0\"?>",
+        "<year>2011</year>",
+        "Added in version 3.8."
+      ]
+    },
+    {
+      "source_path": "library/xml.sax.handler.html",
+      "examples": [
+        "access: (parsing) read-only; (not parsing) read/write"
+      ]
+    },
+    {
+      "source_path": "library/xmlrpc.client.html",
+      "examples": [
+        "from xmlrpc.server import SimpleXMLRPCServer",
+        "server = SimpleXMLRPCServer((\"localhost\", 8000))",
+        "print(\"Listening on port 8000...\")"
+      ]
+    },
+    {
+      "source_path": "license.html",
+      "examples": [
+        "Redistribution and use in source and binary forms, with or without",
+        "modification, are permitted provided that the following conditions",
+        "notice, this list of conditions and the following disclaimer."
+      ]
+    },
+    {
+      "source_path": "py-modindex.html",
+      "examples": [
+        "Removed in 3.12."
+      ]
+    },
+    {
+      "source_path": "reference/compound_stmts.html",
+      "examples": [
+        "[\"else\" \":\" suite]"
+      ]
+    },
+    {
+      "source_path": "reference/grammar.html",
+      "examples": [
+        "# ---------------"
+      ]
+    },
+    {
+      "source_path": "reference/simple_stmts.html",
+      "examples": [
+        "Traceback (most recent call last):"
+      ]
+    },
+    {
+      "source_path": "tutorial/controlflow.html",
+      "examples": [
+        "Traceback (most recent call last):",
+        "File \"<stdin>\", line 1, in <module>"
+      ]
+    },
+    {
+      "source_path": "tutorial/errors.html",
+      "examples": [
+        "Traceback (most recent call last):",
+        "File \"<stdin>\", line 1, in <module>",
+        "File \"<stdin>\", line 2, in <module>"
+      ]
+    },
+    {
+      "source_path": "tutorial/modules.html",
+      "examples": [
+        "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
+      ]
+    },
+    {
+      "source_path": "using/cmdline.html",
+      "examples": [
+        "Added in version 3.11.",
+        "Added in version 3.4.",
+        "Added in version 3.7."
+      ]
+    },
+    {
+      "source_path": "using/configure.html",
+      "examples": [
+        "Added in version 3.6.",
+        "Added in version 3.11.",
+        "Added in version 3.10."
+      ]
+    },
+    {
+      "source_path": "whatsnew/2.3.html",
+      "examples": [
+        "Traceback (most recent call last):"
+      ]
+    },
+    {
+      "source_path": "whatsnew/2.4.html",
+      "examples": [
+        "(Contributed by Raymond Hettinger.)",
+        "Raymond Hettinger.)"
+      ]
+    },
+    {
+      "source_path": "whatsnew/2.6.html",
+      "examples": [
+        "(Contributed by Raymond Hettinger.)",
+        "(Contributed by Christian Heimes.)"
+      ]
+    },
+    {
+      "source_path": "whatsnew/3.10.html",
+      "examples": [
+        "File \"<stdin>\", line 1",
+        "(Contributed by Victor Stinner in bpo-43244.)"
+      ]
+    },
+    {
+      "source_path": "whatsnew/3.11.html",
+      "examples": [
+        "(Contributed by Irit Katriel in bpo-45711.)"
+      ]
+    },
+    {
+      "source_path": "whatsnew/3.12.html",
+      "examples": [
+        "(Contributed by Kumar Aditya in gh-94597.)"
+      ]
+    },
+    {
+      "source_path": "whatsnew/3.2.html",
+      "examples": [
+        "(Contributed by Raymond Hettinger.)"
+      ]
+    },
+    {
+      "source_path": "whatsnew/3.4.html",
+      "examples": [
+        "Traceback (most recent call last):",
+        "File \"<stdin>\", line 1, in <module>"
+      ]
+    },
+    {
+      "source_path": "whatsnew/3.5.html",
+      "examples": [
+        "Traceback (most recent call last):",
+        "(Contributed by Victor Stinner.)",
+        "(Contributed by Yury Selivanov.)"
+      ]
+    },
+    {
+      "source_path": "whatsnew/changelog.html",
+      "examples": [
+        "Core and Builtins",
+        "by Pablo Galindo.",
+        "Victor Stinner."
+      ]
+    },
+    {
+      "source_path": "whatsnew/index.html",
+      "examples": [
+        "Summary – Release highlights",
+        "Other Language Changes",
+        "Improved Modules"
+      ]
+    }
+  ],
+  "short_documents": [
+    {
+      "source_path": "genindex.html",
+      "characters": 184
+    },
+    {
+      "source_path": "howto/clinic.html",
+      "characters": 104
+    },
+    {
+      "source_path": "library/concurrent.html",
+      "characters": 123
+    },
+    {
+      "source_path": "search.html",
+      "characters": 79
+    }
+  ],
+  "index_like_documents": [
+    "genindex-A.html",
+    "genindex-B.html",
+    "genindex-C.html",
+    "genindex-D.html",
+    "genindex-E.html",
+    "genindex-F.html",
+    "genindex-G.html",
+    "genindex-H.html",
+    "genindex-I.html",
+    "genindex-J.html",
+    "genindex-K.html",
+    "genindex-L.html",
+    "genindex-M.html",
+    "genindex-N.html",
+    "genindex-O.html",
+    "genindex-P.html",
+    "genindex-Q.html",
+    "genindex-R.html",
+    "genindex-S.html",
+    "genindex-Symbols.html",
+    "genindex-T.html",
+    "genindex-U.html",
+    "genindex-V.html",
+    "genindex-W.html",
+    "genindex-X.html",
+    "genindex-Y.html",
+    "genindex-Z.html",
+    "genindex-_.html",
+    "genindex-all.html",
+    "genindex.html"
+  ]
+}
